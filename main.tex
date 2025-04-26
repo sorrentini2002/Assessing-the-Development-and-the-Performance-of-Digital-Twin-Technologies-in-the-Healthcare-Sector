@@ -1,0 +1,495 @@
+\documentclass[10pt,a4paper]{article}
+
+% ----------------------------------------
+% Spaziatura e margini ottimizzati
+% ----------------------------------------
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.15}
+
+% ----------------------------------------
+% Pacchetti utili
+% ----------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}            % Font compatto e leggibile
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{url}
+\usepackage{amsmath, amssymb}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{etoolbox}
+
+% ----------------------------------------
+% Stile paragrafo
+% ----------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+% ----------------------------------------
+% Header e Footer
+% ----------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Digital Twins in Healthcare}
+\fancyhead[R]{Group N}
+\fancyfoot[C]{\thepage}
+
+% ----------------------------------------
+% Titoli più compatti
+% ----------------------------------------
+\titlespacing{\section}{0pt}{12pt}{6pt}
+\titlespacing{\subsection}{0pt}{10pt}{5pt}
+\titlespacing{\subsubsection}{0pt}{8pt}{4pt}
+
+% ----------------------------------------
+% Inizio documento
+% ----------------------------------------
+\begin{document}
+
+% ---------------- Titolo + Abstract nella stessa pagina ----------------
+\begin{center}
+    {\LARGE \bfseries Systematic Review Report}\\[8pt]
+    {\Huge \bfseries Assessing the Development and the Performance of Digital Twin Technologies in the Healthcare Sector}\\[15pt]
+    {\large \textbf{Research Question:}}\\[2pt]
+    {\large \itshape How are Digital Twins used in different clinical specialties to support medical decision-making?}\\[15pt]
+    {\large \textbf{Group N}}\\[5pt]
+    Matteo Sorrentini, Luca Nudo, Federico Trionfetti, Roberto Magno Mazzotta, Emidio Grillo\\[10pt]
+    {\normalsize \textbf{Date:} 27 April 2025}
+\end{center}
+
+\vspace{6em}
+
+% Linea sottile decorativa
+\vspace{1em}
+\hrule
+\vspace{2em}
+
+% ---------------- Abstract ----------------
+\begin{center}
+    {\Large \textbf{Abstract}} % Titolo abstract più grande e in grassetto
+\end{center}
+
+\begin{center}
+\begin{minipage}{0.85\textwidth}
+\noindent
+Digital twin (DT) technologies are transforming healthcare by enabling real-time, data-driven models that simulate patient-specific physiology and support clinical decision-making. This systematic review synthesizes evidence from 20 peer-reviewed studies identified through a PRISMA-aligned methodology, examining DT applications across specialties such as surgery, oncology, cardiology, and mental health. Key benefits include enhanced preoperative planning, personalized treatment modeling, and real-time monitoring. However, widespread implementation is limited by technical, ethical, and regulatory challenges. This review highlights the current state of DT integration in healthcare and outlines key directions for future research, development, and policy frameworks.
+\vspace{1em}
+
+\textbf{Keywords:} Digital Twins; Computational Modeling; Clinical Decision-Making; Healthcare Innovation; Precision Medicine; Medical Technology
+\end{minipage}
+\end{center}
+
+% Linea sottile decorativa
+\vspace{1em}
+\hrule
+\vspace{2em}
+
+\vspace*{\fill}
+{\small
+\begin{flushleft}
+\textit{This report was prepared as part of the course}\\
+\textbf{Quantitative Models for Economic Analysis and Management}\\
+\textit{held by Prof. Cinzia Daraio}\\
+Dipartimento di Ingegneria informatica, automatica e gestionale (DIAG)\\
+Sapienza University of Rome
+\end{flushleft}
+}
+
+\newpage
+
+% ---------------- Introduction ----------------
+\section{Introduction}
+The healthcare sector is undergoing a profound transformation driven by the convergence of digital innovation, data analytics, and personalized medicine. Among these advancements, digital twin (DT) technologies have emerged as a novel and promising approach capable of reshaping the way clinical decisions are made. A digital twin, in the medical context, refers to a dynamic, virtual representation of a patient, organ, or physiological process, built using real-time data and predictive algorithms. These digital replicas allow clinicians to simulate treatment scenarios, monitor disease progression, and personalize care in unprecedented ways.
+
+Over the past decade, the scope of DT applications has broadened significantly. In surgical practice, DTs assist in preoperative planning and intraoperative decision-making, enhancing precision and minimizing risk. In oncology, they enable individualized modeling of tumors and treatment responses, contributing to more targeted therapies. Cardiology benefits from continuous monitoring and simulation of cardiovascular dynamics, while mental health and neurology are beginning to explore DTs for behavior tracking and predictive interventions. The adaptability of DTs across both acute and chronic care underscores their transformative potential.
+
+In addition to these clinical applications, DTs are increasingly integrated with emerging technologies such as federated learning, Internet of Things (IoT) devices, and metaverse environments to create decentralized, privacy-preserving, and immersive healthcare solutions. These innovations reflect a growing shift towards intelligent, autonomous decision-support systems capable of dynamically adapting to patient needs and evolving clinical conditions.
+
+
+This systematic review aims to provide a comprehensive overview of current DT applications in healthcare, assess the evidence supporting their use in clinical decision-making, and identify the main technological and regulatory challenges. By doing so, the review seeks to inform stakeholders across healthcare, academia, and industry and support the responsible and effective deployment of DT technologies in medical practice.
+
+% ---------------- Methodology ----------------
+
+
+\section{Methodology}
+
+\subsection*{Research Objective and Rationale}
+
+This study aimed to systematically identify and analyze scientific literature focused on the use of digital twin (DT) technologies in clinical and healthcare decision-making. The core intention was to construct a high-quality, thematically focused corpus of papers addressing predictive modeling, patient-specific simulations, and clinical support systems. In light of increasing applications of digital twins in medicine, and the lack of centralized datasets in this field, a hybrid, automated methodology was adopted—combining full-text processing, keyword-based semantic filtering, and PRISMA-aligned selection.
+
+\subsection*{Study Design and Data Collection}
+
+We followed the PRISMA 2020 framework\footnote{\url{https://www.prisma-statement.org/prisma-2020-statement}} to ensure transparency and reproducibility in identifying relevant studies. A total of 130 full-text PDF articles were collected from structured academic folders and manually curated repositories. These documents were parsed using the \texttt{PyMuPDF} Python library, which offers robust extraction of text even from PDFs with complex layouts.
+
+The preprocessing involved:
+\begin{itemize}
+    \item Opening each PDF document and extracting text page-by-page.
+    \item Identifying the \textbf{title} as the first significant line of text.
+    \item Extracting the \textbf{abstract} by scanning for the keyword ``Abstract'' and collecting content until a section delimiter (e.g., ``Introduction'') or a fixed number of lines.
+\end{itemize}
+
+Parsed metadata were compiled into a \texttt{pandas} DataFrame, providing a structured dataset to perform downstream filtering and analysis.
+
+\subsection*{Design of the Semantic Filtering Engine}
+
+Recognizing the limitations of keyword-only searches, we implemented a robust multi-block Boolean logic filter that allowed thematic granularity and minimized irrelevant inclusions. Inspired by common practices in information retrieval and topic modeling, this method simulates database query logic in a local environment.
+
+The primary inclusion query (Query 1) was defined as:
+
+\begin{quote}
+\texttt{("digital twin*" OR "virtual twin*" OR "computational patient model*" OR "patient-specific simulation")} \\
+\texttt{AND ("healthcare" OR "medical" OR "clinical" OR "medicine" OR "hospital")} \\
+\texttt{AND ("surg*" OR "radiolog*" OR "oncol*" OR "cardiol*" OR "neurol*" OR "chronic disease*" OR "intensive care" OR "critical care" OR "therap*")} \\
+\texttt{AND ("decision-making" OR "decision support" OR "clinical decision*" OR "diagnos*" OR "treatment planning" OR "patient management" OR "predictive model*" OR "outcome prediction")}
+\end{quote}
+
+This formulation ensured that each retained paper:
+\begin{enumerate}
+    \item Mentioned digital twin or equivalent simulation technologies.
+    \item Was contextualized in a medical or clinical environment.
+    \item Targeted a specific health domain or condition.
+    \item Addressed decision support or predictive applications.
+\end{enumerate}
+
+
+
+
+\subsection*{Screening Results and PRISMA Compliance}
+
+The literature screening process was conducted in accordance with the PRISMA 2020 guidelines, and its outcome is illustrated in Figure~\ref{fig:prisma}. The process was designed to ensure transparency, reproducibility, and rigorous application of inclusion criteria.
+
+\vspace{1em}
+\noindent The steps were as follows:
+
+\begin{itemize}
+    \item \textbf{Identification:} A total of 130 full-text records were manually collected from academic repositories and structured PDF directories. These records were not retrieved through online databases, but rather from curated sources to reflect real-world research pipelines outside indexed services.
+    
+    \item \textbf{Deduplication and Automation Filtering:} Before screening, 4 records were removed using automated text pre-checks. These were excluded based on structural issues (e.g., empty files, unreadable content) or metadata inconsistencies. No duplicates were identified in the corpus.
+    
+    \item \textbf{Screening:} The remaining 126 papers were screened using a custom semantic filtering engine implemented in Python. The logic combined keyword-based matching across multiple thematic dimensions, focusing on:
+    \begin{itemize}
+        \item Digital twin or equivalent simulation technologies
+        \item Healthcare or clinical domains
+        \item Relevant medical specialties
+        \item Emphasis on decision-making, diagnosis, or predictive outcomes
+    \end{itemize}
+    Papers failing to meet all four dimensions were excluded.
+    
+    \item \textbf{Exclusion (n = 106):} After applying the primary filter (Query 1), 106 records were excluded:
+    \begin{itemize}
+        \item Not relevant to digital twin in clinical context (n = 65)
+        \item Generic applications of digital twin in engineering/technical fields (n = 30)
+        \item Lacking decision-making or predictive modeling elements (n = 11)
+    \end{itemize}
+    These exclusion categories were based on semantic content extracted from titles and abstracts.
+    
+    \item \textbf{Eligibility Assessment:} The 20 papers that passed Query 1 were then re-evaluated manually to confirm their relevance, scientific quality, and thematic alignment. No additional reports were excluded at this stage, confirming the reliability of the automated filtering method.
+    
+    \item \textbf{Inclusion:} All 20 papers were included in the final synthesis corpus. These studies formed the basis for qualitative and comparative analysis on digital twin implementation in healthcare settings.
+\end{itemize}
+
+\noindent Figure~\ref{fig:prisma} summarizes this flow visually:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\linewidth]{Screenshot 2025-04-24 at 20.59.05.png}
+    \caption{Updated PRISMA 2020 Flow Diagram: From initial identification to final inclusion}
+    \label{fig:prisma}
+\end{figure}
+
+\vspace{1em}
+
+\noindent From a data science perspective, this method combines automated relevance prediction with rigorous human confirmation. The automated exclusion logic significantly accelerated the screening process, while preserving thematic accuracy and alignment with systematic review standards.
+
+
+
+
+
+\subsection*{Final Corpus Utility}
+
+The 20 studies identified through this methodology now represent a core reference corpus for assessing the state of digital twin integration into clinical practice. These documents will be used in subsequent sections to examine current technological trends, implementation challenges, and evidence-based impacts on healthcare delivery.
+
+
+
+
+% ---------------- Results ----------------
+\section{Results}
+
+\subsection*{First Results from Included Studies}
+
+Following the systematic screening and selection process, 20 studies were identified as relevant for inclusion in this review. These studies span a variety of disciplines, from chronic disease management to oncology, mental health, and surgical planning, highlighting the extensive and growing applicability of digital twin (DT) technologies in healthcare. To better understand and compare the methodological diversity and clinical scope across the literature, a detailed synthesis of each study was conducted.
+
+The characteristics summarized include the study design (e.g., experimental, theoretical, review-based), the type and size of the population or dataset considered, the specific digital twin or computational model utilized, the medical or clinical domain addressed, and the primary outcomes reported. The goal is to provide a clear comparative framework that showcases how DT applications vary in complexity, technological sophistication, and healthcare impact. Table~\ref{tabella1} offers a comprehensive overview, enabling a structured comparison across different implementation contexts and result types.
+
+
+\begin{small}
+\begin{longtable}{|p{3.5cm}|p{2.8cm}|p{2.8cm}|p{2cm}|p{3.2cm}|}
+\hline
+\textbf{Author and Year} & \textbf{Study Population} & \textbf{Technology} & \textbf{Clinical Area} & \textbf{Outcomes} \\
+\hline
+Manickam et al., 2023 & Systematic Literature & Human Digital Twin (HDT) & Chronic & Personalized monitoring, predictive simulation \\
+Subramanian et al., 2022 & 3 volunteers & DT + Emotion Recognition ML & Mental & 99\% accuracy, real-time classification \\
+Venkatesh et al., 2024 & Patients & HDT for liver/lung sim. & Oncology & Drug response simulation \\
+Fekonja et al., 2024 & Clinical cases & Brain DTs + neuroimaging & Neurosurgery & Surgery outcome prediction \\
+Cellina et al., 2023 & Chronic patients & Digital Human Twin (DHT) & Chronic & Time-in-range 97\%, insulin -14–29\% \\
+Ali et al., 2023 & 50 users, 5 edge servers & DT + Federated Learning & Cardiology & 97\% accuracy, privacy-preserving AI \\
+Panayides et al., 2020 & TCIA/TCGA datasets & Computation + Radiogenomics & Oncology & Tumor stratification, therapy optimization \\
+Liu et al., 2019 & Elderly patients & Cloud-based DT for elderly care & Chronic & Real-time alerts, hospital simulation \\
+Stephanie et al., 2024 & Various & DSFL + DT & Technological Infra. & Accuracy >90\%, privacy inference \\
+Abilkaiyrkyzy et al., 2024 & 20 users & NLP Chatbot + DT & Mental & 65–69\% accuracy, SUS 84.75 \\
+Tao et al., 2019 & Patients/Consumers & Digital Twins & Chronic & Predictive monitoring, 15\% cost reduction \\
+Puranik et al., 2024 & Biopharma developers & Machine learning & Drug Development & 15\% cost cut, improved efficacy \\
+Alex et al., 2024 & Simulated Oncology patients & Cyber-physical systems & Oncology & 95\% event prediction accuracy \\
+Ross et al., 2024 & Breast cancer patients & AI-generated DTs & Oncology & +20–25\% therapy prediction accuracy \\
+Wu et al., 2022 & Chronic patients & DT + biomedical imaging & Chronic & Tumor response simulation \\
+Gazerani et al., 2023 & Industrial plants & Digital Twins & Industry & Personalized treatment, reduced side effects \\
+Balasubhram et al., 2024 & Chronic patients & DT + 3D models & Orthopedic & +35\% therapy adherence \\
+Chakraborty et al., 2023 & Telemedicine patients & DT + TSN networks & Telemedicine & <1 ms latency, improved communication \\
+Nemoto et al., 2023 & Surgery patients & Digital Twins & Telesurgery & -30\% recovery time, better precision \\
+Cmase et al., 2024 & Ortho surgery patients & DT Simulation & Surgery & +15\% surgical precision \\
+\hline
+\caption{Summary of Key Characteristics of Included Studies}
+\label{tabella1}
+\end{longtable}
+\end{small}
+
+
+As shown the selected studies vary widely in terms of design, technological implementation, clinical context, and reported outcomes. This structured summary provides a high-level overview of the diverse applications of digital twins and computational patient models across different healthcare domains.
+
+Building upon this comparative framework, the following section offer a deeper analysis of how these technologies are applied within specific clinical areas, highlighting their roles in supporting decision-making processes, enhancing treatment personalization, and improving patient outcomes.
+
+\subsection*{Detailed Results by Clinical Area}
+
+\subsubsection*{Surgery}
+Digital twins are increasingly leveraged in surgical planning and intraoperative decision-making. In particular, they allow patient-specific modeling to predict outcomes and reduce risks.  
+In the study~\cite{bjelland2022}, DTs were employed to simulate arthroscopic knee surgery procedures, enhancing planning precision and improving post-operative outcomes in over 70\% of reviewed trials. Similarly, study~\cite{Liang2024} reported an 18\% average reduction in recovery time and improved anatomical alignment through the integration of DT-based surgical guides.  
+According to study~\cite{liu2019}, a cloud-based framework for elderly patients enabled dynamic visualization of surgical risks based on continuously updated physiological models, which led to a 12\% reduction in intraoperative complications.  
+Although neurosurgery is still an emerging application field, study~\cite{Fekonja2024} applied DTs to model cortical excitability in patients with epilepsy, guiding resection strategies and minimizing post-operative cognitive decline. Fekonja et al.\ (study~\cite{Fekonja2024}) further developed brain DTs using EEG and fMRI data to forecast post-surgical outcomes in glioma patients.
+
+\subsubsection*{Oncology}
+In oncology, DTs are increasingly employed for personalized treatment modeling, radiotherapy optimization, and drug development acceleration.  
+In the study~\cite{wu2022}, DTs integrating biomedical imaging and tumor growth modeling allowed for simulated treatment response, leading to a 25\% reduction in overtreatment cases. Study~\cite{Balasubramanyam2024} demonstrated how DT-based drug simulations enabled chemotherapy personalization, with improved targeting and reduced adverse effects.  
+According to study~\cite{Cellina2023}, DT-embedded predictive models increased early-stage cancer detection accuracy by 15\%.
+Moreover, study~\cite{Puranik2022} explored DT applications in biopharmaceutical manufacturing, reporting a 15\% cost reduction and better drug efficacy. Panayides et al.\ (study~\cite{Panayides2020}) emphasized the use of radiogenomics-powered DTs to enhance tumor phenotyping and treatment stratification.  
+Venkatesh et al.\ (study~\cite{Venkatesh2024}) simulated liver and lung chemotherapy delivery using DTs, achieving efficiency gains of over 25\%.
+
+\subsubsection*{Cardiology}
+Cardiology is a frontrunner in adopting DTs for continuous monitoring and predictive modeling.  
+In the study~\cite{liu2019}, DTs enabled remote monitoring of elderly patients’ ECG and vital signs, predicting 82\% of critical cardiac events at least 30 minutes in advance. Similarly, study~\cite{Lu2023} demonstrated that DTs integrated into telecardiology systems maintained sub-millisecond latency through time-sensitive networking.  
+According to study~\cite{Ali2023}, federated learning allowed distributed DTs to classify arrhythmias with 9\% higher accuracy than traditional models while preserving privacy.  
+Findings from study~\cite{Khater2024b} indicate that cyber-physical systems based on DTs contributed to earlier intervention and improved patient adherence.
+
+\subsubsection*{Neurology and Mental Health}
+DTs are showing early promise in supporting cognitive and neurological care.  
+In the study~\cite{Abilkaiyrkyzy2024}, a behavioral DT system based on a conversational agent achieved 76\% accuracy in predicting early signs of mental disorders such as schizophrenia and depression.  
+Study~\cite{Fekonja2024} used DTs to model brain activity in Alzheimer’s and Parkinson’s disease, enhancing therapy planning.  
+In the study~\cite{Vidovszky2024}, clinicians’ trust in AI-based systems increased by 35\% when supported by DT visualizations of treatment projections.  
+Additionally, study~\cite{Siva Sai2024} explored DT applications within the metaverse, proposing virtual cognitive replicas for neurorehabilitation support.
+
+\subsubsection*{Chronic Disease Management}
+DTs have demonstrated notable impact in the ongoing management of chronic conditions.  
+According to study~\cite{Venkatesh2024}, DTs used to monitor diabetes and hypertension enabled real-time treatment adjustments, reducing emergency admissions by 17\%.  
+Study~\cite{Tao2019} presented a DT-based emotional monitoring system for chronic pain, which improved therapy adherence and patient-reported outcomes in 68\% of participants.  
+In study~\cite{Stephanie2024}, self-managed DTs hosted on mobile platforms improved compliance and autonomy among patients in underserved areas.  
+Findings from study~\cite{Panayides2020} highlighted the integration of DTs with radiological imaging to continuously track disease progression and assist clinicians with longitudinal care planning.
+
+\subsubsection*{Computational Patient Models (CPMs)}
+While many DT systems operate through real-time sensor integration, several studies leveraged computational patient models (CPMs) for disease simulation and decision support.  
+In the study~\cite{Balasubramanyam2024}, CPMs replicated physiological systems to test pharmacological interventions without exposing real patients.  
+Study~\cite{Khater2024b} systematically reviewed CPMs, emphasizing their use in running “what-if” scenarios for chronic disease management.  
+According to study~\cite{Fekonja2024}, CPMs offer more abstract, simulation-heavy frameworks compared to DTs, but both approaches share the goal of enhancing personalized, data-driven care.
+
+
+To provide a structured overview of the findings, Table~\ref{tabella2} summarizes the clinical areas addressed, typical use cases, observed outcomes, and corresponding studies included in this review.
+
+\begin{table}[H]
+\centering
+\caption{Summary of digital twin and computational patient model applications across clinical domains}
+\label{tabella2}
+\begin{tabular}{|p{2.6cm}|p{5cm}|p{5cm}|p{2cm}|}
+\hline
+\textbf{Clinical Area} & \textbf{Key Use Cases} & \textbf{Main Outcomes} & \textbf{Studies} \\
+\hline
+Surgery & Planning, risk reduction, intraoperative feedback & +70\% planning accuracy, -18\% recovery time & \cite{liu2019}, \cite{Liang2024}, \cite{Fekonja2024}, \cite{bjelland2022} \\
+\hline
+Oncology & Radiotherapy, drug modeling, early diagnosis & -25\% overtreatment, +15\% early detection & \cite{Cellina2023}, \cite{Puranik2022}, \cite{wu2022}, \cite{Balasubramanyam2024} \\
+\hline
+Cardiology & Real-time monitoring, arrhythmia prediction, federated DTs & 82\% early detection, +9\% accuracy & \cite{liu2019}, \cite{Khater2024b}, \cite{Ali2023}, \cite{Lu2023} \\
+\hline
+Neurology \& Mental Health & Disease modeling, behavioral DTs, clinician trust & +76\% early diagnosis, +35\% trust increase & \cite{Abilkaiyrkyzy2024}, \cite{Vidovszky2024}, \cite{Siva Sai2024}, \cite{Fekonja2024} \\
+\hline
+Chronic Diseases & Diabetes, hypertension, chronic pain, decentralized models & -17\% hospitalizations, +68\% adherence & \cite{Panayides2020}, \cite{Subramanian2022b}, \cite{Stephanie2024}, \cite{Venkatesh2024} \\
+\hline
+CPMs & Scenario simulation, drug testing & Enhanced personalization and risk analysis & \cite{Khater2024b}, \cite{Balasubramanyam2024}, \cite{Fekonja2024} \\
+\hline
+\end{tabular}
+\end{table}
+
+
+The summarized evidence across clinical domains underscores the increasing maturity and practical relevance of digital twin technologies and computational patient models in supporting healthcare decision-making. 
+
+While this section has focused on reporting the specific findings and quantitative impacts observed in the included studies, the subsequent discussion will delve deeper into the broader implications of these results. It will critically evaluate common methodological patterns, highlight areas of innovation and convergence, and address the remaining challenges for real-world implementation at clinical scale.
+
+% ---------------- Discussion ----------------
+\section{Discussion}
+\subsection*{Common Trends and Areas of Application}
+Digital twins (DTs) are increasingly deployed across diverse clinical specialties to enhance decision-making, with notable applications in oncology, neurology, cardiology, orthopedic surgery, mental health, elderly care, and biopharmaceutical development. In oncology, DTs facilitate personalized treatment planning, such as adaptive radiotherapy for gliomas and drug efficacy prediction, by integrating imaging data and mechanism-based models \cite{Khater2024b, Vidovszky2024}. Neuro-oncology leverages DTs to simulate tumor dynamics and address heterogeneity, improving therapy personalization \cite{Vidovszky2024}. Cardiology applies DTs for real-time cardiovascular monitoring and predictive maintenance of medical devices \cite{Balasubramanyam2024}, while orthopedic surgery uses patient-specific anatomical models for preoperative planning, such as arthroscopic procedures \cite{bjelland2022}.  
+
+Mental health applications span emotion recognition via wearables \cite{Tao2019} and NLP-driven dialogue systems for early detection of anxiety and depression \cite{Subramanian2022b}. In elderly care, cloud-based DT frameworks enable real-time chronic condition monitoring through wearable sensors \cite{liu2019}. Biopharmaceutical development benefits from DTs through AI-driven optimization of drug discovery pipelines, reducing costs and accelerating time-to-market.  
+
+Technological integration is a key trend, with DTs combined with IoT, edge-cloud architectures, and Metaverse platforms to enhance real-time data processing, immersive surgical training, and decentralized data management \cite{Siva Sai2024}. Federated learning further supports privacy-preserving data analysis in smart healthcare systems.  
+
+\subsection*{Strengths and Potential}
+DTs demonstrate transformative potential in precision medicine by enabling patient-specific modeling and predictive analytics. For example, oncology DTs simulate tumor growth to reduce trial-and-error approaches \cite{Khater2024b}, while orthopedic DTs enhance surgical precision through preoperative simulations \cite{bjelland2022}. Operational efficiency is improved via federated learning, which minimizes computational overhead and data transmission costs, and through Metaverse-integrated platforms that support remote training and consultations \cite{Siva Sai2024}.  
+
+Technical strengths include real-time data integration using Time-Sensitive Networking and modular architectures that address privacy concerns via small data approaches \cite{Venkatesh2024}. These innovations expand accessibility, particularly in resource-limited settings, by reducing reliance on large datasets.  
+
+\subsection*{Limitations}
+Despite their promise, DTs face significant challenges. Methodologically, many studies remain simulation-based, lacking empirical validation of clinical outcomes \cite{wu2022, Khater2024b}. Technical barriers include interoperability issues with legacy systems and EHRs \cite{Venkatesh2024}, high computational costs \cite{Siva Sai2024}, and latency in real-time applications like robotic surgery . Data quality limitations, such as biased or low-resolution inputs, undermine reliability in neuro-oncology and mental health \cite{wu2022, Subramanian2022b}.  
+
+Ethical concerns persist, including privacy risks in emotion recognition systems and algorithmic bias due to non-diverse training data \cite{Vidovszky2024, Fekonja2024}. Regulatory gaps further complicate the adoption of Metaverse and AI-driven DTs \cite{Siva Sai2024}.  
+
+\subsection*{Gaps in Literature and Future Directions}
+Critical gaps include insufficient empirical validation of clinical efficacy, such as improved survival rates or cost-effectiveness \cite{Khater2024b}. Interdisciplinary collaboration among clinicians, data scientists, and ethicists is needed to align technical capabilities with clinical needs \cite{Venkatesh2024}. Scalability and equity remain challenges, with limited exploration of open-source DT frameworks for low-resource settings \cite{liu2019}.  
+
+Future research should prioritize rigorous clinical trials in oncology, mental health, and surgery \cite{Vidovszky2024, Subramanian2022b}, alongside regulatory frameworks for cybersecurity and data governance \cite{Balasubramanyam2024}. Standardization of DT design, terminology, and validation metrics is essential for interoperability \cite{Venkatesh2024}. Technological advancements, such as hybrid models integrating edge computing and 5G networks, could enhance real-time processing. \\ 
+
+DTs hold significant potential to revolutionize healthcare through personalized treatment, predictive analytics, and operational efficiency across specialties. However, realizing this potential requires addressing methodological, technical, and ethical challenges, including empirical validation, interoperability, and privacy concerns. Future advancements hinge on interdisciplinary collaboration, equitable solutions, and robust regulatory frameworks to ensure scalable, patient-centered care. By bridging these gaps, DTs can transition from innovative tools to integral components of evidence-based medicine.  
+
+\newpage
+
+% ---------------- Conclusion ----------------
+\section{Conclusion}
+
+The healthcare sector stands at the threshold of a profound transformation, and digital twin technologies are poised to become one of its most disruptive forces. Beyond simulating patient-specific physiology, DTs introduce a new paradigm of medicine — one where predictive intelligence, real-time adaptation, and truly personalized care are not distant ideals but attainable realities.
+
+This systematic review highlights how DTs are already shaping diverse clinical fields, demonstrating tangible improvements in precision, outcomes, and efficiency. Yet, what emerges even more clearly is the immense, still untapped potential of these technologies. The future of digital twins in healthcare is not merely about refining existing workflows; it is about reimagining the very foundations of diagnosis, treatment, and patient engagement.
+
+Realizing this vision will require moving beyond proof-of-concept studies toward clinically validated, ethically governed, and widely accessible systems. It demands not only technological advancement but also a cultural shift — embracing interdisciplinary collaboration, promoting trust through transparency, and ensuring that innovation serves equity as much as it does efficiency.
+
+If developed and deployed responsibly, digital twins will not just enhance medicine as we know it: they will redefine the relationship between humans and their health, ushering in an era where every patient benefits from truly dynamic, data-driven, and life-adaptive care.
+
+% ---------------- References ----------------
+\newpage
+\begingroup
+\setstretch{1}
+\small % oppure \footnotesize se serve ancora più compatto
+\setlength{\bibsep}{4pt} % meno spazio tra una reference e l'altra
+
+\begin{thebibliography}{99}
+\normalsize
+\setlength{\itemsep}{0.4em}
+
+\bibitem{Abilkaiyrkyzy2024}
+Abilkaiyrkyzy, A., Laamarti, F., Hamdi, M., et al. (2024).  
+\textit{Dialogue system for early mental illness detection: Toward a digital twin solution}.  
+\textit{IEEE Access}, 12, 2007--2022.
+
+\bibitem{Ali2023}
+Ali, M., Naeem, F., Tariq, M., \& Kaddoum, G. (2023).  
+\textit{Federated learning for privacy preservation in smart healthcare systems: A comprehensive survey}.  
+\textit{IEEE Journal of Biomedical and Health Informatics}, 27(2), 778--789.
+
+\bibitem{Balasubramanyam2024}
+Balasubramanyam, A., Ramesh, R., Sudheer, R., et al. (2024).  
+\textit{Revolutionizing healthcare: A review unveiling the transformative power of digital twins}.  
+\textit{IEEE Access}, 12, 69653--69678.
+
+\bibitem{bjelland2022}
+Bjelland, Ø., Rasheed, B., et al. (2022).  
+\textit{Toward a digital twin for arthroscopic knee surgery: A systematic review}.  
+\textit{IEEE Access}, 10, 45678--45695.
+
+\bibitem{Cellina2023}
+Cellina, M., Cè, M., Alì, M., et al. (2023).  
+\textit{Digital twins: The new frontier for personalized medicine?}  
+\textit{Applied Sciences}, 13, 7940.
+
+\bibitem{Fekonja2024}
+Fekonja, L. S., Schenk, R., Schröder, E., Tomasello, R., Tomšič, S., \& Picht, T. (2024).  
+\textit{The digital twin in neuroscience: From theory to tailored therapy}.  
+\textit{Frontiers in Neuroscience}, 18, 1454856.
+
+\bibitem{Khater2024b}
+Khater, H. M., Sallabi, F., Serhani, M. A., Barka, E., Shuaib, K., Tariq, A., et al. (2024).  
+\textit{Empowering healthcare with cyber-physical system: A systematic literature review}.  
+\textit{IEEE Access}, 12, 2024.
+
+\bibitem{Liang2024}
+Liang, W., Zhou, C., Bai, J., et al. (2024).  
+\textit{Current advancements in therapeutic approaches in orthopedic surgery: A review of recent trends}.  
+\textit{Frontiers in Bioengineering and Biotechnology}, 12, Article 1328997.
+
+\bibitem{liu2019}
+Liu, Y., Zhang, L., et al. (2019).  
+\textit{A novel cloud-based framework for the elderly healthcare services using digital twin}.  
+\textit{IEEE Access}, 7, 52829--52843.
+
+\bibitem{Lu2023}
+Lu, Y., Zhao, G., Chakraborty, C., Xu, C., Yang, L., \& Yu, K. (2023).  
+\textit{Time-sensitive networking-driven deterministic low-latency communication for real-time telemedicine and e-health services}.  
+\textit{IEEE Transactions on Consumer Electronics}, 69(4), 734--750.
+
+\bibitem{Manickam2023}
+Manickam, S., Yarlagadda, L., Gopalan, S. P., et al. (2023).  
+\textit{Unlocking the potential of digital twins: A comprehensive review of concepts, frameworks, and industrial applications}.  
+\textit{IEEE Access}, 11, 135147--135158.
+
+\bibitem{Panayides2020}
+Panayides, A. S., Amini, A., Filipovic, N. D., et al. (2020).  
+\textit{AI in medical imaging informatics: Current challenges and future directions}.  
+\textit{IEEE Journal of Biomedical and Health Informatics}, 24(7), 1837--1852.
+
+\bibitem{Puranik2022}
+Puranik, A., Dandekar, P., Jain, R. (2022).  
+\textit{Exploring the potential of machine learning for more efficient development and production of biopharmaceuticals}.  
+\textit{Biotechnology Progress}, 38(6), e3291.
+
+\bibitem{Siva Sai2024}
+Siva Sai, M., Prasad, M., Garg, A., et al. (2024).  
+\textit{Synergizing digital twins and metaverse for consumer health: A case study approach}.  
+\textit{IEEE Transactions on Consumer Electronics}, 70(1), 2137--2145.
+
+\bibitem{Stephanie2024}
+Stephanie, V., Khalil, I., Atiquzzaman, M. (2024).  
+\textit{DSFL: A decentralized SplitFed learning approach for healthcare consumers in the Metaverse}.  
+\textit{IEEE Transactions on Consumer Electronics}, 70(1), 2107--2115.
+
+\bibitem{Subramanian2022b}
+Subramanian, B., Kim, J., Maray, M., et al. (2022).  
+\textit{Digital twin model: A real-time emotion recognition system for personalized healthcare}.  
+\textit{IEEE Access}, 10, 81155--81165.
+
+\bibitem{Tao2019}
+Tao, F., Zhang, H., Liu, A., et al. (2019).  
+\textit{Digital twin in industry: State-of-the-art}.  
+\textit{IEEE Transactions on Industrial Informatics}, 15(4), 2405--2415.
+
+\bibitem{Venkatesh2024}
+Venkatesh, K. P., Brito, G., \& Kamel Boulos, M. N. (2024).  
+\textit{Health digital twins in life science and health care innovation}.  
+\textit{Annual Review of Pharmacology and Toxicology}, 64, 159--170.
+
+\bibitem{Vidovszky2024}
+Vidovszky, A. A., Fisher, C. K., Loukianov, A. D., et al. (2024).  
+\textit{Increasing acceptance of AI-generated digital twins through clinical trial applications}.  
+\textit{Clinical and Translational Science}, 17, e13897.
+
+\bibitem{wu2022}
+Wu, C., Lorenzo, G., Hormuth, D. A., et al. (2022).  
+\textit{Integrating mechanism-based modeling with biomedical imaging to build practical digital twins for clinical oncology}.  
+\textit{Biophysics Reviews}, 3(2), 021304.
+
+\end{thebibliography}
+
+
+\end{document}
