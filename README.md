@@ -35,11 +35,11 @@ This project systematically reviews the role of **Digital Twin (DT)** technologi
 ---
 
 ## Methodology
-- **Framework**: PRISMA 2020 compliance.
+- **Framework**: python implementation of the search engine , PRISMA 2020 compliance.
 - **Corpus**: 130 scientific papers manually collected.
 - **Filtering**: Semantic filtering via Python-based Boolean queries.
 - **Final Selection**: 20 studies included.
-- **Extraction Tools**: PyMuPDF, pandas for metadata organization.
+- **Extraction Tools**: PyMuPDF, pandas for metadata organization. (using python) 
 
 Semantic Query Focused On:
 - Digital Twin concepts
@@ -89,8 +89,8 @@ Digital Twin technologies hold transformative potential for personalized, predic
 ```bash
 📦digital-twin-healthcare
 ├── README.md
-├── Group_N_SR.pdf   # Full systematic review report
-└── figures/          # Folder for PRISMA flow diagrams, tables, graphics
+├── paper.pdf   # Full systematic review report
+└── search_engine.ipynb         # jupiter notebok to implement the search engine in python for the parsing 
 ```
 
 ---
