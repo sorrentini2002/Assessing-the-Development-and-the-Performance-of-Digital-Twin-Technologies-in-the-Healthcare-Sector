@@ -22,7 +22,7 @@ Department: *DIAG - Sapienza University of Rome*
 
 ---
 
-## abstract
+## Abstract
 This project systematically reviews the role of **Digital Twin (DT)** technologies in the healthcare sector. Using a PRISMA-aligned selection methodology, we analyze 20 peer-reviewed studies across various clinical domains: surgery, oncology, cardiology, neurology, mental health, and chronic disease management. The review identifies key applications, benefits, challenges, and future research directions.
 
 **Keywords:** Digital Twins, Computational Modeling, Clinical Decision-Making, Healthcare Innovation, Precision Medicine, Medical Technology
