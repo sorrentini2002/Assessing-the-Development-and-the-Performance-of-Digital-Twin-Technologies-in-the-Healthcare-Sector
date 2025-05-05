@@ -1,6 +1,5 @@
 # Assessing-the-Development-and-the-Performance-of-Digital-Twin-Technologies-in-the-Healthcare-Sector
 This project systematically reviews the role of Digital Twin (DT) technologies in the healthcare sector. 
-# README for "Digital Twins in Healthcare - Group N"
 
 ## Project Title
 **Digital Twins in Healthcare: A Systematic Review**
@@ -18,7 +17,7 @@ Professor: *Cinzia Daraio*
 Department: *DIAG - Sapienza University of Rome*
 
 ## Project Date
-**27 April 2025**
+**1st deadline : 27 April 2025**
 
 ---
 
