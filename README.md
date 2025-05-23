@@ -88,10 +88,13 @@ Digital Twin technologies hold transformative potential for personalized, predic
 ```bash
 📦digital-twin-healthcare
 ├── README.md
-├── paper.pdf   # Full systematic review report
-├── main.tex # source code file for latex 
-└── Bibliometric_Review_DigitalTwins_CBA.ipynb ---> main python file for metodology     # jupiter notebok to implement the search engine in python for the parsing 
+├── LICENSE
+├── Final_paper.pdf   # Full systematic review report version of the paper in pdf
+├── main.tex # final .tex source code
+└── Bibliometric_Review_DigitalTwins_CBA.ipynb # main python file for metodology     # jupiter notebok to implement the search engine in python for the parsing 
 ```
+
+
 
 ---
 
