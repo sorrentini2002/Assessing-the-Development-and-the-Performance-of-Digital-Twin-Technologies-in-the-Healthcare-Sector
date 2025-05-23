@@ -57,13 +57,13 @@
 
 % ---------------- Titolo + Abstract nella stessa pagina ----------------
 \begin{center}
-    {\LARGE \bfseries Systematic Review Report}\\[8pt]
+    {\LARGE \bfseries Final Project Work}\\[8pt]
     {\Huge \bfseries Assessing the Development and the Performance of Digital Twin Technologies in the Healthcare Sector}\\[15pt]
     {\large \textbf{Research Question:}}\\[2pt]
     {\large \itshape How are Digital Twins used in different clinical specialties to support medical decision-making?}\\[15pt]
     {\large \textbf{Group N}}\\[5pt]
-    Matteo Sorrentini, Luca Nudo, Federico Trionfetti, Roberto Magno Mazzotta, Emidio Grillo\\[10pt]
-    {\normalsize \textbf{Date:} 27 April 2025}
+    Emidio Grillo, Roberto Magno Mazzotta, Luca Nudo, Matteo Sorrentini, Federico Trionfetti\\[10pt]
+    {\normalsize \textbf{Date:} 23 May 2025}
 \end{center}
 
 \vspace{6em}
@@ -108,14 +108,42 @@ Sapienza University of Rome
 
 % ---------------- Introduction ----------------
 \section{Introduction}
+
 The healthcare sector is undergoing a profound transformation driven by the convergence of digital innovation, data analytics, and personalized medicine. Among these advancements, digital twin (DT) technologies have emerged as a novel and promising approach capable of reshaping the way clinical decisions are made. A digital twin, in the medical context, refers to a dynamic, virtual representation of a patient, organ, or physiological process, built using real-time data and predictive algorithms. These digital replicas allow clinicians to simulate treatment scenarios, monitor disease progression, and personalize care in unprecedented ways.
 
-Over the past decade, the scope of DT applications has broadened significantly. In surgical practice, DTs assist in preoperative planning and intraoperative decision-making, enhancing precision and minimizing risk. In oncology, they enable individualized modeling of tumors and treatment responses, contributing to more targeted therapies. Cardiology benefits from continuous monitoring and simulation of cardiovascular dynamics, while mental health and neurology are beginning to explore DTs for behavior tracking and predictive interventions. The adaptability of DTs across both acute and chronic care underscores their transformative potential.
+Over the past decade, the scope of DT applications has broadened significantly. In surgical practice, DTs assist in preoperative planning and intraoperative decision-making, enhancing precision and minimizing risk \cite{bjelland2022, Liang2024}. In oncology, they enable individualized modeling of tumors and treatment responses, contributing to more targeted therapies \cite{wu2022, Puranik2022, Cellina2023}. Cardiology benefits from continuous monitoring and simulation of cardiovascular dynamics \cite{Ali2023, Lu2023}, while mental health and neurology are beginning to explore DTs for behavior tracking and predictive interventions \cite{Abilkaiyrkyzy2024, Subramanian2022b, Fekonja2024}. Chronic disease management is another area witnessing rapid adoption of DT-based solutions, with studies highlighting improvements in adherence, monitoring, and treatment personalization \cite{Stephanie2024, Venkatesh2024}.
 
-In addition to these clinical applications, DTs are increasingly integrated with emerging technologies such as federated learning, Internet of Things (IoT) devices, and metaverse environments to create decentralized, privacy-preserving, and immersive healthcare solutions. These innovations reflect a growing shift towards intelligent, autonomous decision-support systems capable of dynamically adapting to patient needs and evolving clinical conditions.
+The promise of digital twins lies not only in their capacity to replicate biological phenomena but also in their ability to integrate data across scales—from molecular pathways to organ systems—into unified predictive models. Recent works have combined DTs with technologies such as federated learning, Internet of Things (IoT) devices, wearable sensors, and immersive virtual environments, creating intelligent, decentralized, and privacy-preserving health platforms \cite{Siva Sai2024, Stephanie2024}. These integrated systems aim to deliver adaptive decision support, particularly in remote and underserved settings.
 
+However, the integration of DTs into clinical workflows remains uneven and fragmented. Many projects are confined to research environments or pilot applications, and there is a lack of large-scale empirical validation. Barriers to adoption include data heterogeneity, computational resource constraints, regulatory uncertainty, and concerns over algorithmic transparency and patient privacy \cite{Vidovszky2024, Fekonja2024}. As the field matures, it becomes crucial to better understand the evidence base supporting DTs and the specific contexts in which they offer tangible clinical value.
 
-This systematic review aims to provide a comprehensive overview of current DT applications in healthcare, assess the evidence supporting their use in clinical decision-making, and identify the main technological and regulatory challenges. By doing so, the review seeks to inform stakeholders across healthcare, academia, and industry and support the responsible and effective deployment of DT technologies in medical practice.
+In light of these developments, this systematic review seeks to consolidate existing knowledge and critically evaluate the current use of digital twins and computational patient models in healthcare.
+
+\subsection*{Research Questions}
+To guide this effort, the study is structured around the following key research questions:
+\begin{itemize}
+    \item \textbf{RQ1:} In which clinical domains are digital twins most actively applied to support medical decision-making?
+    \item \textbf{RQ2:} What are the main technological configurations and modeling approaches used in healthcare-related DTs?
+    \item \textbf{RQ3:} What types of clinical outcomes or decision-support functions are achieved with DT implementation?
+    \item \textbf{RQ4:} What are the main limitations, risks, and regulatory challenges reported across the literature?
+    \item \textbf{RQ5:} What potential cost-benefit trade-offs emerge from the integration of DTs into clinical workflows?
+\end{itemize}
+
+These questions aim to explore not only the practical applications of DTs but also the conditions for their broader adoption and sustainability.
+
+\subsection*{Objectives of the Review}
+Based on the above research questions, the main objectives of this systematic review are:
+\begin{itemize}
+    \item Synthesize current applications of DTs in clinical contexts, based on empirical and conceptual studies.
+    \item Identify technological trends, strengths, and methodological patterns.
+    \item Highlight clinical and organizational barriers to adoption, including data, ethical, and regulatory limitations.
+    \item Provide a preliminary cost-benefit perspective to inform future research and policy development.
+    \item Offer a structured synthesis that can inform future research, development strategies, and policy guidelines.
+\end{itemize}
+
+This review builds on a curated corpus of 20 peer-reviewed articles selected through a PRISMA-aligned methodology. Each study was evaluated for its relevance to digital twin applications in medicine, with an emphasis on clinical impact, predictive accuracy, and decision-support capabilities. The included papers cover a diverse array of specialties and use cases, from neuro-oncological planning and telecardiology to diabetes self-management and emotion-aware mental health systems. Rather than presenting a purely technical taxonomy, this review adopts a systems-level perspective to assess how DTs contribute to value-based, patient-centered care.
+
+By placing clinical utility at the center of the analysis, the aim is not only to map existing efforts but also to reflect on their coherence, replicability, and potential scalability. Ultimately, the goal is to provide a comprehensive reference point for researchers, clinicians, and policymakers seeking to responsibly advance the integration of digital twin technologies in healthcare.
 
 % ---------------- Methodology ----------------
 
@@ -124,7 +152,7 @@ This systematic review aims to provide a comprehensive overview of current DT ap
 
 \subsection*{Research Objective and Rationale}
 
-This study aimed to systematically identify and analyze scientific literature focused on the use of digital twin (DT) technologies in clinical and healthcare decision-making. The core intention was to construct a high-quality, thematically focused corpus of papers addressing predictive modeling, patient-specific simulations, and clinical support systems. In light of increasing applications of digital twins in medicine, and the lack of centralized datasets in this field, a hybrid, automated methodology was adopted—combining full-text processing, keyword-based semantic filtering, and PRISMA-aligned selection.
+This study aims to systematically identify and analyze scientific literature focused on the use of digital twin (DT) technologies in clinical and healthcare decision-making. The core intention was to construct a high-quality, thematically focused corpus of papers addressing predictive modeling, patient-specific simulations, and clinical support systems. In light of increasing applications of digital twins in medicine, and the lack of centralized datasets in this field, a hybrid, automated methodology was adopted—combining full-text processing, keyword-based semantic filtering, and PRISMA-aligned selection.
 
 \subsection*{Study Design and Data Collection}
 
@@ -133,8 +161,8 @@ We followed the PRISMA 2020 framework\footnote{\url{https://www.prisma-statement
 The preprocessing involved:
 \begin{itemize}
     \item Opening each PDF document and extracting text page-by-page.
-    \item Identifying the \textbf{title} as the first significant line of text.
-    \item Extracting the \textbf{abstract} by scanning for the keyword ``Abstract'' and collecting content until a section delimiter (e.g., ``Introduction'') or a fixed number of lines.
+    \item Identifying the title as the first significant line of text.
+    \item Extracting the abstract by scanning for the keyword ``Abstract'' and collecting content until a section delimiter (e.g., ``Introduction'') or a fixed number of lines.
 \end{itemize}
 
 Parsed metadata were compiled into a \texttt{pandas} DataFrame, providing a structured dataset to perform downstream filtering and analysis.
@@ -177,18 +205,18 @@ The literature screening process was conducted in accordance with the PRISMA 202
     
     \item \textbf{Screening:} The remaining 126 papers were screened using a custom semantic filtering engine implemented in Python. The logic combined keyword-based matching across multiple thematic dimensions, focusing on:
     \begin{itemize}
-        \item Digital twin or equivalent simulation technologies
-        \item Healthcare or clinical domains
-        \item Relevant medical specialties
-        \item Emphasis on decision-making, diagnosis, or predictive outcomes
+        \item Digital twin or equivalent simulation technologies.
+        \item Healthcare or clinical domains.
+        \item Relevant medical specialties.
+        \item Emphasis on decision-making, diagnosis, or predictive outcomes.
     \end{itemize}
     Papers failing to meet all four dimensions were excluded.
     
-    \item \textbf{Exclusion (n = 106):} After applying the primary filter (Query 1), 106 records were excluded:
+    \item \textbf{Exclusion:} After applying the primary filter (Query 1), 106 records were excluded:
     \begin{itemize}
-        \item Not relevant to digital twin in clinical context (n = 65)
-        \item Generic applications of digital twin in engineering/technical fields (n = 30)
-        \item Lacking decision-making or predictive modeling elements (n = 11)
+        \item Not relevant to digital twin in clinical context (n = 65).
+        \item Generic applications of digital twin in engineering/technical fields (n = 30).
+        \item Lacking decision-making or predictive modeling elements (n = 11).
     \end{itemize}
     These exclusion categories were based on semantic content extracted from titles and abstracts.
     
@@ -197,16 +225,107 @@ The literature screening process was conducted in accordance with the PRISMA 202
     \item \textbf{Inclusion:} All 20 papers were included in the final synthesis corpus. These studies formed the basis for qualitative and comparative analysis on digital twin implementation in healthcare settings.
 \end{itemize}
 
-\noindent Figure~\ref{fig:prisma} summarizes this flow visually:
+\noindent Figure~\ref{fig:prisma}, avialable into Appendix, summarizes this flow visually.
+
+\vspace{1em}
+
+% -----------------------------------------------------------------
+% --- Text-Mining and Visual-Analytics Sub-section  ---------------
+% -----------------------------------------------------------------
+\subsection*{Text-Mining Workflow and Keyword–Method Mapping}
+
+To characterise the thematic and methodological landscape of the
+final corpus, we applied a two-stage natural-language-processing
+(NLP) pipeline:  
+\emph{(i)} tokenisation\slash lemmatisation with the \texttt{spaCy}
+library, followed by stop-word removal;  
+\emph{(ii)} stratified extraction of (a) high-frequency \textbf{keywords}
+(signalling clinical domains or application foci) and (b)
+\textbf{method tags} (denoting modelling or data-science techniques).
+The resulting matrices were visualised with \texttt{matplotlib} and
+\texttt{seaborn} to support rapid exploratory analysis and internal
+validation of the semantic filter.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\linewidth]{Screenshot 2025-04-24 at 20.59.05.png}
-    \caption{Updated PRISMA 2020 Flow Diagram: From initial identification to final inclusion}
-    \label{fig:prisma}
+    \includegraphics[width=0.9\linewidth]{keyword_frequency_word_count.png}
+    \caption{%
+        \textbf{Global term landscape.}  
+        Word-cloud generated from the cleaned corpus (TF weighting).
+        Font size encodes raw frequency; colour hue encodes quartiles
+        of the term-frequency distribution.
+        Dominant tokens such as \emph{twins}, \emph{personalized},
+        \emph{service}, and \emph{manufacturing} confirm that the
+        retrieved literature spans both clinical and industrial
+        perspectives—corroborating the breadth required by our
+        inclusion criteria (\S\ref{sec:Methodology}).}
+    \label{fig:wordcloud}
 \end{figure}
 
-\vspace{1em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.94\linewidth]{keyword_method_heatmap.png}
+    \caption{%
+        \textbf{Keyword–method co-occurrence heat-map.}  
+        Cell intensity denotes the number of articles in which a given
+        keyword and method tag co-appear.  The matrix reveals two
+        prominent clusters:  
+        (1)~\emph{“personalized/clinical’’} keywords strongly coupled
+        with \emph{digital-twin} and \emph{federated-learning} tags,
+        and  
+        (2)~\emph{“manufacturing/service’’} keywords associated with
+        \emph{simulation} and \emph{blockchain}.  
+        These patterns guided subsequent, cluster-specific synthesis
+        in the Results section.}
+    \label{fig:heatmap}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{top_5_keyword_with_top5method.png}
+    \caption{%
+        \textbf{Joint distribution of the five most frequent keywords
+        across the five most frequent methods.}  
+        Stacked bars expose how emphasis on individual concepts
+        (e.g.\ \emph{data}, \emph{twins}) shifts across analytic
+        methodologies, allowing us to cross-validate the thematic
+        representativeness of each methodological stratum.}
+    \label{fig:stackedbar}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{top_15_keywords_in_DT_paper.png}
+    \caption{%
+        \textbf{Top-15 domain keywords.}  
+        Absolute counts of the most salient application terms in the
+        corpus.  The long-tail distribution justifies our choice of a
+        combined Boolean and semantic filter (Query 1) to prevent
+        topical dilution.}
+    \label{fig:top15kw}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{top_15_method.png}
+    \caption{%
+        \textbf{Top-15 methodological tags.}  
+        Frequency analysis confirms that traditional
+        \emph{simulation} and \emph{model} categories remain dominant,
+        while data-centric approaches (\emph{machine learning},
+        \emph{federated learning}, \emph{edge computing}) are gaining
+        traction—an insight later exploited in our cost–benefit
+        discussion (\S\ref{sec:CBA}).}
+    \label{fig:top15method}
+\end{figure}
+
+\paragraph{Interpretive note.}
+Collectively, Figures~\ref{fig:wordcloud}–\ref{fig:top15method}
+validate the semantic-filter design, confirm topic balance, and
+highlight latent clusters that informed both the qualitative coding
+scheme and the subsequent sub-group synthesis presented in the
+\emph{Results} section.
+
 
 \noindent From a data science perspective, this method combines automated relevance prediction with rigorous human confirmation. The automated exclusion logic significantly accelerated the screening process, while preserving thematic accuracy and alignment with systematic review standards.
 
@@ -225,43 +344,9 @@ The 20 studies identified through this methodology now represent a core referenc
 \section{Results}
 
 \subsection*{First Results from Included Studies}
+Following a systematic selection process, 30 studies were included in this review. These contributions span a broad spectrum of clinical and technological domains, including chronic disease management, mental health, surgical simulation, precision oncology, and healthcare operations. They collectively reflect the expanding reach and growing sophistication of digital twin (DT) applications in health-related contexts.
 
-Following the systematic screening and selection process, 20 studies were identified as relevant for inclusion in this review. These studies span a variety of disciplines, from chronic disease management to oncology, mental health, and surgical planning, highlighting the extensive and growing applicability of digital twin (DT) technologies in healthcare. To better understand and compare the methodological diversity and clinical scope across the literature, a detailed synthesis of each study was conducted.
-
-The characteristics summarized include the study design (e.g., experimental, theoretical, review-based), the type and size of the population or dataset considered, the specific digital twin or computational model utilized, the medical or clinical domain addressed, and the primary outcomes reported. The goal is to provide a clear comparative framework that showcases how DT applications vary in complexity, technological sophistication, and healthcare impact. Table~\ref{tabella1} offers a comprehensive overview, enabling a structured comparison across different implementation contexts and result types.
-
-
-\begin{small}
-\begin{longtable}{|p{3.5cm}|p{2.8cm}|p{2.8cm}|p{2cm}|p{3.2cm}|}
-\hline
-\textbf{Author and Year} & \textbf{Study Population} & \textbf{Technology} & \textbf{Clinical Area} & \textbf{Outcomes} \\
-\hline
-Manickam et al., 2023 & Systematic Literature & Human Digital Twin (HDT) & Chronic & Personalized monitoring, predictive simulation \\
-Subramanian et al., 2022 & 3 volunteers & DT + Emotion Recognition ML & Mental & 99\% accuracy, real-time classification \\
-Venkatesh et al., 2024 & Patients & HDT for liver/lung sim. & Oncology & Drug response simulation \\
-Fekonja et al., 2024 & Clinical cases & Brain DTs + neuroimaging & Neurosurgery & Surgery outcome prediction \\
-Cellina et al., 2023 & Chronic patients & Digital Human Twin (DHT) & Chronic & Time-in-range 97\%, insulin -14–29\% \\
-Ali et al., 2023 & 50 users, 5 edge servers & DT + Federated Learning & Cardiology & 97\% accuracy, privacy-preserving AI \\
-Panayides et al., 2020 & TCIA/TCGA datasets & Computation + Radiogenomics & Oncology & Tumor stratification, therapy optimization \\
-Liu et al., 2019 & Elderly patients & Cloud-based DT for elderly care & Chronic & Real-time alerts, hospital simulation \\
-Stephanie et al., 2024 & Various & DSFL + DT & Technological Infra. & Accuracy >90\%, privacy inference \\
-Abilkaiyrkyzy et al., 2024 & 20 users & NLP Chatbot + DT & Mental & 65–69\% accuracy, SUS 84.75 \\
-Tao et al., 2019 & Patients/Consumers & Digital Twins & Chronic & Predictive monitoring, 15\% cost reduction \\
-Puranik et al., 2024 & Biopharma developers & Machine learning & Drug Development & 15\% cost cut, improved efficacy \\
-Alex et al., 2024 & Simulated Oncology patients & Cyber-physical systems & Oncology & 95\% event prediction accuracy \\
-Ross et al., 2024 & Breast cancer patients & AI-generated DTs & Oncology & +20–25\% therapy prediction accuracy \\
-Wu et al., 2022 & Chronic patients & DT + biomedical imaging & Chronic & Tumor response simulation \\
-Gazerani et al., 2023 & Industrial plants & Digital Twins & Industry & Personalized treatment, reduced side effects \\
-Balasubhram et al., 2024 & Chronic patients & DT + 3D models & Orthopedic & +35\% therapy adherence \\
-Chakraborty et al., 2023 & Telemedicine patients & DT + TSN networks & Telemedicine & <1 ms latency, improved communication \\
-Nemoto et al., 2023 & Surgery patients & Digital Twins & Telesurgery & -30\% recovery time, better precision \\
-Cmase et al., 2024 & Ortho surgery patients & DT Simulation & Surgery & +15\% surgical precision \\
-\hline
-\caption{Summary of Key Characteristics of Included Studies}
-\label{tabella1}
-\end{longtable}
-\end{small}
-
+Table~\ref{tabella1} presents a comparative overview of the selected studies, summarizing their objectives, methodological approaches, data sources, target populations, and primary reported outcomes. Populations range from individual patients and healthcare professionals to institutional stakeholders and simulated environments, offering insight into the diverse contexts in which DTs are deployed.
 
 As shown the selected studies vary widely in terms of design, technological implementation, clinical context, and reported outcomes. This structured summary provides a high-level overview of the diverse applications of digital twins and computational patient models across different healthcare domains.
 
@@ -273,110 +358,408 @@ Building upon this comparative framework, the following section offer a deeper a
 Digital twins are increasingly leveraged in surgical planning and intraoperative decision-making. In particular, they allow patient-specific modeling to predict outcomes and reduce risks.  
 In the study~\cite{bjelland2022}, DTs were employed to simulate arthroscopic knee surgery procedures, enhancing planning precision and improving post-operative outcomes in over 70\% of reviewed trials. Similarly, study~\cite{Liang2024} reported an 18\% average reduction in recovery time and improved anatomical alignment through the integration of DT-based surgical guides.  
 According to study~\cite{liu2019}, a cloud-based framework for elderly patients enabled dynamic visualization of surgical risks based on continuously updated physiological models, which led to a 12\% reduction in intraoperative complications.  
-Although neurosurgery is still an emerging application field, study~\cite{Fekonja2024} applied DTs to model cortical excitability in patients with epilepsy, guiding resection strategies and minimizing post-operative cognitive decline. Fekonja et al.\ (study~\cite{Fekonja2024}) further developed brain DTs using EEG and fMRI data to forecast post-surgical outcomes in glioma patients.
+Although neurosurgery is still an emerging application field, study~\cite{Fekonja2024} applied DTs to model cortical excitability in patients with epilepsy, guiding resection strategies and minimizing post-operative cognitive decline.  
+Organ-level DTs such as cardiovascular or hepatic models also show promise in surgery preparation and post-operative monitoring, as discussed in~\cite{Alsalloum2024}. Wearable solutions like the vital-signs wristband from~\cite{Mascret2024} further support real-time intraoperative physiological data capture with clinically acceptable accuracy (e.g., heart rate MAE 2.81 bpm).
 
 \subsubsection*{Oncology}
 In oncology, DTs are increasingly employed for personalized treatment modeling, radiotherapy optimization, and drug development acceleration.  
 In the study~\cite{wu2022}, DTs integrating biomedical imaging and tumor growth modeling allowed for simulated treatment response, leading to a 25\% reduction in overtreatment cases. Study~\cite{Balasubramanyam2024} demonstrated how DT-based drug simulations enabled chemotherapy personalization, with improved targeting and reduced adverse effects.  
-According to study~\cite{Cellina2023}, DT-embedded predictive models increased early-stage cancer detection accuracy by 15\%.
+According to study~\cite{Cellina2023}, DT-embedded predictive models increased early-stage cancer detection accuracy by 15\%.  
 Moreover, study~\cite{Puranik2022} explored DT applications in biopharmaceutical manufacturing, reporting a 15\% cost reduction and better drug efficacy. Panayides et al.\ (study~\cite{Panayides2020}) emphasized the use of radiogenomics-powered DTs to enhance tumor phenotyping and treatment stratification.  
-Venkatesh et al.\ (study~\cite{Venkatesh2024}) simulated liver and lung chemotherapy delivery using DTs, achieving efficiency gains of over 25\%.
+Venkatesh et al.\ (study~\cite{Venkatesh2024}) simulated liver and lung chemotherapy delivery using DTs, achieving efficiency gains of over 25\%.  
+Alsalloum et al.\cite{Alsalloum2024} provided additional examples of tumor-specific modeling (e.g., stroke progression forecasting via ML), while Boverhof et al.\cite{Boverhof2024} promoted digital twins as a foundation for in silico clinical trials in radiology, particularly to evaluate diagnostic and therapeutic efficacy in oncology.
 
 \subsubsection*{Cardiology}
 Cardiology is a frontrunner in adopting DTs for continuous monitoring and predictive modeling.  
 In the study~\cite{liu2019}, DTs enabled remote monitoring of elderly patients’ ECG and vital signs, predicting 82\% of critical cardiac events at least 30 minutes in advance. Similarly, study~\cite{Lu2023} demonstrated that DTs integrated into telecardiology systems maintained sub-millisecond latency through time-sensitive networking.  
 According to study~\cite{Ali2023}, federated learning allowed distributed DTs to classify arrhythmias with 9\% higher accuracy than traditional models while preserving privacy.  
-Findings from study~\cite{Khater2024b} indicate that cyber-physical systems based on DTs contributed to earlier intervention and improved patient adherence.
+Findings from study~\cite{Khater2024b} indicate that cyber-physical systems based on DTs contributed to earlier intervention and improved patient adherence.  
+Wang et al.~\cite{Wang2025} highlighted virtual cardiac DTs as part of immersive metaverse applications for real-time condition monitoring and empathetic feedback interfaces.
 
 \subsubsection*{Neurology and Mental Health}
 DTs are showing early promise in supporting cognitive and neurological care.  
 In the study~\cite{Abilkaiyrkyzy2024}, a behavioral DT system based on a conversational agent achieved 76\% accuracy in predicting early signs of mental disorders such as schizophrenia and depression.  
 Study~\cite{Fekonja2024} used DTs to model brain activity in Alzheimer’s and Parkinson’s disease, enhancing therapy planning.  
 In the study~\cite{Vidovszky2024}, clinicians’ trust in AI-based systems increased by 35\% when supported by DT visualizations of treatment projections.  
-Additionally, study~\cite{Siva Sai2024} explored DT applications within the metaverse, proposing virtual cognitive replicas for neurorehabilitation support.
+Additionally, study~\cite{Siva Sai2024} explored DT applications within the metaverse, proposing virtual cognitive replicas for neurorehabilitation support.  
+The review by Alsalloum et al.~\cite{Alsalloum2024} includes cerebral DTs and neuron-level simulations, offering future perspectives for real-time brain modeling in mental health diagnostics.
 
 \subsubsection*{Chronic Disease Management}
 DTs have demonstrated notable impact in the ongoing management of chronic conditions.  
 According to study~\cite{Venkatesh2024}, DTs used to monitor diabetes and hypertension enabled real-time treatment adjustments, reducing emergency admissions by 17\%.  
 Study~\cite{Tao2019} presented a DT-based emotional monitoring system for chronic pain, which improved therapy adherence and patient-reported outcomes in 68\% of participants.  
 In study~\cite{Stephanie2024}, self-managed DTs hosted on mobile platforms improved compliance and autonomy among patients in underserved areas.  
-Findings from study~\cite{Panayides2020} highlighted the integration of DTs with radiological imaging to continuously track disease progression and assist clinicians with longitudinal care planning.
+Findings from study~\cite{Panayides2020} highlighted the integration of DTs with radiological imaging to continuously track disease progression and assist clinicians with longitudinal care planning.  
+Ahmed et al.\cite{Ahmed2023} and Getachew et al.\cite{Getachew2024} underline how digital infrastructures (e.g., BDA, AI, remote monitoring systems) form a solid basis for scalable DT solutions in chronic care, enabling multimodal data fusion and decentralized decision support.
 
 \subsubsection*{Computational Patient Models (CPMs)}
 While many DT systems operate through real-time sensor integration, several studies leveraged computational patient models (CPMs) for disease simulation and decision support.  
 In the study~\cite{Balasubramanyam2024}, CPMs replicated physiological systems to test pharmacological interventions without exposing real patients.  
 Study~\cite{Khater2024b} systematically reviewed CPMs, emphasizing their use in running “what-if” scenarios for chronic disease management.  
-According to study~\cite{Fekonja2024}, CPMs offer more abstract, simulation-heavy frameworks compared to DTs, but both approaches share the goal of enhancing personalized, data-driven care.
-
+According to study~\cite{Fekonja2024}, CPMs offer more abstract, simulation-heavy frameworks compared to DTs, but both approaches share the goal of enhancing personalized, data-driven care.  
+Wu et al.\cite{Wu2025} proposed reinforcement learning as a powerful engine for training CPMs in operational contexts like ICU logistics and epidemic control. Boverhof et al.\cite{Boverhof2024} further validated the role of CPMs in early-stage, virtual clinical validation of imaging technologies.
 
 To provide a structured overview of the findings, Table~\ref{tabella2} summarizes the clinical areas addressed, typical use cases, observed outcomes, and corresponding studies included in this review.
 
+The summarized evidence across clinical domains underscores the increasing maturity and practical relevance of digital twin technologies and computational patient models in supporting healthcare decision-making. 
+
+Building on the overview of digital twin applications and their reported outcomes, the following section applies a cost-benefit analysis framework to evaluate their practical value in clinical contexts. This structured assessment integrates both quantitative and qualitative dimensions derived from the reviewed literature.
+
+% ---------------- Cost-benefit analysis ----------------
+\newpage
+\section{Cost-benefit analysis}
+ \subsection*{Project Definition}
+
+The application of Digital Twins (DTs) in clinical medicine represents a transformative approach to healthcare delivery, integrating real-time patient data, computational modeling, and artificial intelligence (AI) to enable personalized, predictive, and proactive decision-making. This Cost-Benefit Analysis (CBA) evaluates the economic viability of DT implementations across four key clinical specialties—oncology, cardiology, critical care, and radiology—based on evidence from nine peer-reviewed studies. The primary goal is to quantify the financial implications of adopting DT technologies relative to their clinical and operational benefits, emphasizing cost savings, resource efficiency, and improved patient outcomes.
+
+A structured evaluation framework underpins the analysis: Figure~\ref{fig:radar} illustrates the seven levels of the RADAR framework, which integrates clinical effectiveness, economic impact, and local feasibility. This methodology provides a standardized lens for assessing DT applications, particularly in radiology, and informs the broader cost-benefit evaluation.
+
+Empirical evidence highlights DTs’ capacity to deliver measurable benefits across specialties:
+
+\begin{itemize}
+  \item \textbf{Oncology}: Personalized chemotherapy optimization reduces futile treatments, saving \$10,000–\$30,000 per patient \cite{Wang2025}.
+  \item \textbf{Cardiology}: High-fidelity arrhythmia detection (95\%+ sensitivity) minimizes hospitalizations \cite{Ahmed2023}.
+  \item \textbf{Critical Care}: Early sepsis prediction shortens ICU stays by 20–30\%, yielding \$20,000–\$50,000 in savings per patient \cite{Mascret2024}.
+  \item \textbf{Radiology}: AI-driven imaging analytics reduce reporting times by 30–50\%, avoiding \$500–\$2,000 in unnecessary biopsies \cite{Bocean2025}.
+\end{itemize}
+
+While these findings underscore DTs’ clinical and economic potential, their adoption hinges on addressing interoperability challenges and indirect costs, such as clinician training and system integration. For instance, upfront investments in genomic profiling (\$500,000+) and computational infrastructure (\$1M+ for radiology datasets) create disparities in access between large academic centers and smaller facilities. These systemic barriers necessitate adaptive financing mechanisms to ensure equitable scalability.
+
+By synthesizing quantitative data with practical implementation insights, this analysis emphasizes that DT success depends not only on measurable ROI but also on inclusive governance frameworks. These frameworks must address access inequities, prioritize interoperability standards (e.g., FHIR/HL7), and align financial incentives with long-term clinical value.
+
+In the \textbf{baseline scenario} (``without DT''), healthcare delivery remains reliant on traditional, reactive models that prioritize standardized protocols over patient-specific insights. Oncology care continues to face inefficiencies in chemotherapy administration, with high rates of futile treatments contributing to unnecessary costs (\$10,000--\$30,000 per patient) and toxicities \cite{Wang2025}. Cardiology practices depend on conventional monitoring systems, resulting in delayed arrhythmia detection and preventable hospitalizations \cite{Ahmed2023}. Critical care settings struggle with sepsis management under current protocols, where late diagnosis prolongs ICU stays by 20--30\% per patient and increases complications-related costs (\$20,000--\$50,000 per patient) \cite{Mascret2024}. Radiology workflows remain manual, with reporting delays and diagnostic errors driving redundant procedures and \$500--\$2,000 in avoidable biopsy costs per case \cite{Bocean2025}. Systemic inefficiencies, such as fragmented data integration and reliance on population averages, perpetuate suboptimal resource allocation and inequitable access to advanced care.
+
+In the \textbf{project scenario} (``with DT''), the integration of Digital Twins transforms these specialties through real-time, personalized insights. In \textit{oncology}, multi-omics-driven virtual drug trials reduce ineffective chemotherapy cycles, saving \$10,000--\$30,000 per patient by targeting KRAS mutations and resistance mechanisms \cite{Wang2025}. \textit{Cardiology} benefits from 95\%+ sensitivity arrhythmia detection models, which minimize undiagnosed cardiac anomalies and lower hospitalization rates \cite{Ahmed2023}. \textit{Critical care} sees sepsis prediction systems identify early deterioration 6--12 hours sooner, shortening ICU stays by 20--30\% and generating \$20,000--\$50,000 in savings per patient \cite{Mascret2024}. \textit{Radiology} leverages AI-powered imaging analytics to automate segmentation and nodule detection, reducing reporting times by 30--50\% and avoiding \$500--\$2,000 per unnecessary biopsy \cite{Bocean2025}. However, these gains depend on addressing upfront costs (e.g., \$500,000+ for genomic profiling \cite{Wang2025}, \$1M+ for radiology datasets \cite{Bocean2025}) and interoperability challenges, which currently limit scalability in smaller facilities. The analysis adopts a 2--5 year horizon, aligning with longitudinal data gaps and discounting assumptions, to evaluate cumulative impacts across these four specialties. By contrasting these scenarios, the CBA underscores the transformative potential of DTs while emphasizing the need for adaptive financing and governance frameworks to ensure equitable adoption and long-term ROI.
+
+
+
+\subsection*{Identification of Physical Impacts}
+
+The physical impacts of Digital Twin (DT) applications in clinical medicine manifest across multiple dimensions, including patient outcomes, operational efficiency, and healthcare system capacity. These impacts vary significantly by clinical specialty, reflecting the heterogeneous nature of DT implementations. In oncology , DTs demonstrate a notable ability to reduce the administration of ineffective therapies, as evidenced by \cite{Wang2025}, which reports savings of \$10,000–\$30,000 per patient by avoiding futile chemotherapy cycles. This is achieved through multi-omics data integration and patient-specific tumor growth simulations, which enable virtual drug trials and early detection of resistance mechanisms, such as KRAS mutations in colorectal cancer. Similarly, in cardiology , DTs enhance arrhythmia detection and heart failure monitoring, with \cite{Ahmed2023} citing 95\%+ sensitivity in identifying cardiac anomalies via machine learning (ML)-driven models. These capabilities reduce the risk of undiagnosed arrhythmias and optimize pacing strategies, directly improving patient safety.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{image6.png}
+    \caption{This figure contrasts DT performance in cardiology (95\%+ sensitivity for arrhythmia detection \cite{Ahmed2023}) against hypothetical traditional methods across diagnostic accuracy, specificity, and speed. This visualization reinforces the CBA’s claim that DTs reduce hospitalizations for undiagnosed cardiac anomalies, emphasizing their clinical superiority.}
+    \label{fig:enter-label}
+\end{figure}
+
+In critical care settings, DTs focus on early sepsis prediction and ICU resource optimization. \cite{Mascret2024} highlights that DT-enabled systems can identify sepsis 6–12 hours earlier than standard protocols, reducing ICU length of stay by 20–30\% and saving \$20,000–\$50,000 per patient by preventing complications such as organ failure. Additionally, \cite{Boverhof2024} notes that predictive analytics in ICUs streamline workflows, reducing clinician workload and enabling proactive interventions. In radiology , DT-driven AI tools automate image segmentation and anomaly detection, as described in \cite{Bocean2025}, which cites 95\%+ accuracy in lung nodule detection via deep learning models. This reduces reporting times by 30–50\% and minimizes repeat imaging, avoiding unnecessary biopsies and saving \$500–\$2,000 per avoided procedure.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{image1.png}
+    \caption{The figure visualizes the projected decline in ICU length of stay over time due to Digital Twin (DT)-enabled early sepsis detection, as reported in [19]. This line plot illustrates the gradual realization of benefits (20–30\% reduction) and underscores the long-term resource optimization achievable through predictive analytics, aligning with the CBA’s emphasis on critical care efficiency gains.}
+    \label{fig:plot1}
+\end{figure}
+
+However, these benefits are accompanied by challenges. DTs in oncology and cardiology require extensive data integration, including genomic profiling (\$500,000+ upfront costs in \cite{Wang2025}) and real-time sensor data, which strain existing infrastructure. In radiology, computational costs for model training and maintenance (e.g., \$10,000–\$50,000 annually in \cite{Bocean2025}) pose barriers to scalability. Furthermore, interoperability gaps between electronic health records (EHRs), wearable devices, and DT platforms limit widespread adoption across specialties, as noted in \cite{Mascret2024},\cite{Ahmed2023},\cite{Bocean2025}. These physical impacts underscore the dual nature of DTs: while they offer transformative clinical and operational gains, their implementation demands substantial resource allocation and systemic adjustments.
+
+To complement the analysis of physical and infrastructural impacts, Figure~\ref{fig:neuralnet} presents a neural network model illustrating how ethical and quality-related factors—such as safety and reliability—directly influence user satisfaction and breadth of use. These dimensions are critical for evaluating the long-term benefits of DT adoption, as higher levels of user trust and engagement can reduce training costs and amplify operational effectiveness, thus reinforcing the overall value proposition within the CBA framework.
+
+\subsection*{Economic Valuation}
+
+The economic valuation of Digital Twin (DT) applications in clinical medicine necessitates a granular assessment of quantifiable benefits and associated costs across specialties, balancing short-term expenditures with long-term savings. In oncology , DTs demonstrate substantial cost-offset potential through personalized chemotherapy optimization, as evidenced by \cite{Wang2025}, which estimates savings of \$10,000–\$30,000 per patient by avoiding ineffective treatment cycles. These benefits stem from multi-omics data integration and virtual drug trials that reduce trial-and-error prescribing. However, upfront costs for genomic profiling and model development exceed \$500,000, with annual maintenance and clinician training expenses ranging from \$50,000 to \$100,000 per system \cite{Wang2025}. Similarly, in cardiology, DTs enhance arrhythmia detection with 95\%+ sensitivity \cite{Ahmed2023}, reducing hospitalizations for undiagnosed cardiac anomalies. While development costs for real-time sensor integration and physics-based models remain high, operational savings from avoided readmissions and optimized pacing strategies offset expenditures over time.
+
+As theoretical support for these findings, hypothetical frameworks in neurology highlight that the economic viability of DTs depends critically on interoperability between digital infrastructures and existing clinical workflows. These models suggest that integrating real-time data (e.g., imaging, electrophysiology) with advanced simulations could not only optimize resource management but also anticipate adverse events, reducing reliance on standardized interventions. However, indirect costs related to staff training and organizational restructuring represent significant barriers, particularly in settings with legacy systems where adaptation requires additional investments for system harmonization.
+
+In critical care , DTs yield the most robust economic impacts, particularly in sepsis management. \cite{Mascret2024} reports that early sepsis prediction via DT systems reduces ICU length of stay by 20–30\%, translating to \$20,000–\$50,000 in savings per patient by preventing organ failure and downstream complications. These gains align with \cite{Boverhof2024} findings on workflow efficiency, where predictive analytics reduced clinician workload and resource misallocation. However, computational costs for real-time simulations (e.g., cloud/edge infrastructure) and interoperability challenges with EHRs temper immediate ROI. In related clinical fields such as neurosurgery, theoretical studies hypothesize that adopting modular frameworks with residual value (e.g., federated brain tumor models reusable in stroke care) could mitigate technological obsolescence risks—a critical consideration also for DTs in intensive care. This flexibility, however, demands higher initial investments to ensure scalability and adaptability to new applications.
+
+In radiology , DT-driven AI tools automate imaging analytics, achieving 95\%+ accuracy in lung nodule detection \cite{Bocean2025}. This reduces reporting times by 30–50\% and avoids \$500–\$2,000 per unnecessary biopsy, though initial investments for annotated imaging datasets exceed \$1 million, with annual computational costs of \$10,000–\$50,000 \cite{Bocean2025}. According to theoretical literature, the long-term economic value of DTs requires careful evaluation of impact distribution. For instance, large academic centers might achieve significant savings through scalability, while smaller clinics face structural barriers tied to upfront costs. This disparity, observed also in the neurology sector, underscores the need for adaptive financing policies to ensure equitable access.
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{image2.png}
+    \caption{This figure compares ROI and annual savings between large academic centers and smaller healthcare facilities, reflecting the disparities highlighted in this section. By quantifying the uneven access to DT benefits (e.g., 45\% vs. 15\% ROI), the chart supports policy recommendations for subsidized financing to address systemic inequities.}
+    \label{fig:plot3}
+\end{figure}
+
+Across specialties, indirect costs such as regulatory compliance (e.g., FDA certification in \cite{Wang2025}) and clinician retraining amplify financial burdens, particularly in heterogeneous healthcare systems. While DTs in oncology and critical care exhibit the clearest cost-benefit ratios, data gaps persist in areas like mental health or primary care, where empirical economic studies are sparse. Furthermore, variability in cost structures—such as \cite{Ahmed2023}’s emphasis on data integration expenses versus \cite{Bocean2025} focus on computational demands—underscores the need for context-specific valuation frameworks. Despite high initial outlays, cumulative evidence suggests that DTs can achieve economic viability through sustained reductions in hospitalizations, diagnostic errors, and futile treatments, contingent on scalable infrastructure and policy support.
+
+In the \textbf{baseline scenario} ("without DT"), healthcare systems rely on conventional practices characterized by reactive decision-making and standardized protocols. Oncology care incurs significant costs from ineffective chemotherapy cycles (\$10,000–\$30,000 per patient due to trial-and-error prescribing), while cardiology faces preventable hospitalizations for undiagnosed arrhythmias. Critical care struggles with sepsis management, resulting in prolonged ICU stays (costing \$20,000–\$50,000 per patient due to complications), and radiology grapples with inefficiencies in manual imaging analysis, leading to unnecessary biopsies (\$500–\$2,000 per procedure). These inefficiencies are compounded by fragmented data integration, legacy infrastructure, and high staff training costs, with no systemic mechanisms to anticipate adverse events or personalize care.  
+
+The \textbf{intervention scenario} ("with DT") introduces Digital Twins as transformative tools to reduce these burdens. In oncology, DTs enable multi-omics-driven chemotherapy optimization, avoiding futile treatments and saving \$10,000–\$30,000 per patient \cite{Wang2025}, though upfront genomic profiling exceeds \$500,000, with annual maintenance of \$50,000–\$100,000. In critical care, early sepsis prediction shortens ICU stays by 20–30\%, yielding \$20,000–\$50,000 in per-patient savings \cite{Mascret2024}, but real-time simulations and interoperability upgrades (e.g., EHR integration) delay immediate ROI. Radiology benefits from AI-driven automation, reducing reporting times by 30–50\% and avoiding \$500–\$2,000 per unnecessary biopsy \cite{Bocean2025}, though initial investments for annotated datasets exceed \$1 million, with annual computational costs of \$10,000–\$50,000. Cardiology gains from 95\%+ sensitivity arrhythmia detection offset readmission costs over time, despite high development expenses. Across specialties, DTs promise long-term viability through reduced hospitalizations and diagnostic errors, but upfront investments and indirect costs (e.g., FDA certification \cite{Wang2025}, clinician retraining) create financial barriers, particularly for smaller facilities.
+
+\subsection*{Discounting}
+
+Discounting adjusts future costs and benefits to their present value, reflecting the time value of money and societal preference for near-term outcomes. In evaluating Digital Twin (DT) applications, this principle is critical due to divergent time horizons across specialties. For instance, DTs in critical care deliver immediate savings—such as reducing ICU stays by 20–30\% through early sepsis detection \cite{Mascret2024}—while oncology applications, like multi-omics-driven chemotherapy optimization \cite{Wang2025}, require sustained investment over years to realize \$10,000–\$30,000 per-patient savings. Radiology tools \cite{Bocean2025} similarly demand high upfront costs (e.g., \$1M+ for annotated datasets) despite recurring long-term benefits from reduced diagnostic errors.
+
+To illustrate temporal dynamics, a standard 3–5\% discount rate is applied. For example, a DT system saving \$50,000 per ICU patient today would have a present value of \$43,130 over five years at a 3\% discount rate. Conversely, a \$500,000 upfront investment in genomic profiling retains a present value of \$431,300 over the same period, underscoring the trade-off between immediate gains and delayed returns. However, most studies lack longitudinal data beyond 2–3 years \cite{Mascret2024}, \cite{Wang2025}, complicating precise discounting and highlighting the need for extended follow-up to validate net present value (NPV) estimates.
+
+Figures~\ref{fig:pie} and~\ref{fig:pie1} visualize key challenges in DT adoption, including disparities in research funding and publication patterns between academic centers and smaller facilities. These figures emphasize the necessity of balanced investments in clinical validation and infrastructure to ensure equitable scalability of DT technologies.
+
+By focusing on transparent discounting frameworks and longitudinal data collection, stakeholders can better assess the economic viability of DTs, prioritizing interventions with measurable near-term impacts (e.g., ICU cost reductions) while planning for long-term returns in complex domains like oncology.
+
+\subsection*{Uncertainty Analysis}
+
+Uncertainty in the cost-benefit analysis (CBA) of Digital Twin (DT) applications arises from three key dimensions: data variability, model assumptions, and external factors such as evolving regulations and technological shifts. These uncertainties directly affect the reliability of projected economic outcomes and must be addressed to ensure actionable insights for stakeholders.
+
+\begin{enumerate}
+    \item \textbf{Data Variability} \\
+    Clinical DT implementations rely heavily on datasets that are often limited in scope and duration. For example, critical care and oncology studies frequently draw conclusions from small-scale, single-center trials (n < 50 patients) \cite{Mascret2024, Wang2025}, raising concerns about generalizability. In oncology, cost estimates for genomic profiling (\$500,000+ upfront) and savings from avoided chemotherapy cycles (\$10,000–\$30,000 per patient) are based on short-term follow-up (<2 years), with no longitudinal data beyond this period. Similarly, sepsis prediction models in critical care \cite{Mascret2024} assume clinician adherence to alerts and rapid response times—unvalidated assumptions that could undermine projected ICU cost savings (\$20,000–\$50,000 per patient). Radiology tools \cite{Bocean2025} trained on limited annotated datasets (e.g., 1,000–10,000 images) risk reduced real-world performance in diverse populations, further complicating scalability assessments.
+
+    \begin{figure} [H]
+        \centering
+        \includegraphics[width=0.75\linewidth]{image7.png}
+        \caption{This figure identifies key variables affecting ICU cost-saving estimates (e.g., predictive accuracy, clinician compliance \cite{Mascret2024}), mapping their potential impact on savings variability. This tornado diagram aligns with the CBA’s call for sensitivity analyses, prioritizing areas for risk mitigation in DT scalability.}
+        \label{fig:plot6}
+    \end{figure}
+
+    \item \textbf{Sensitivity to Model Assumptions} \\
+    The economic viability of DTs hinges on unproven assumptions about clinical integration and technological performance. For instance, cardiac arrhythmia detection models (95\%+ sensitivity) \cite{Ahmed2023} presume seamless interoperability with telemetry systems—yet real-world deployment may stall due to incompatible data formats or clinician resistance to AI-driven recommendations. Similarly, divergent cost structures between machine learning (ML) and physics-based DTs (e.g., tumor growth simulations) \cite{Wang2025, Bocean2025} complicate cross-specialty comparisons. ML-driven radiology tools require annual computational costs of \$10,000–\$50,000, whereas oncology-focused physics-based models demand higher upfront investments (\$500,000+), creating disparities in ROI timelines. These assumptions amplify uncertainty, particularly for long-term interventions like oncology applications, where discounting rates (3–5\%) disproportionately affect net present value (NPV) calculations.
+
+    \item \textbf{External and Policy-Driven Uncertainties} \\
+    Regulatory and reimbursement landscapes add further complexity. Compliance costs (e.g., FDA certification for clinical DT tools) remain speculative \cite{Wang2025, Bocean2025}, while funding models struggle to address disparities in access. For example, high upfront costs for genomic profiling (\$500,000+ per patient) \cite{Wang2025} risk excluding low-resource settings, despite projected long-term savings. Theoretical frameworks in neurology highlight how rapid technological obsolescence could erode the residual value of modular DT systems (e.g., federated brain tumor models), underscoring the need for adaptive design principles to sustain clinical relevance.
+\end{enumerate}
+
+\textbf{Addressing Uncertainty} \\
+To mitigate these risks, the analysis emphasizes:
+
+\begin{itemize}
+    \item Hybrid methodologies that combine empirical data with adaptive strategies for data heterogeneity and stakeholder-specific barriers.
+    \item Standardized validation frameworks to improve cross-population applicability, such as federated learning architectures that reduce bias in underrepresented groups \cite{Wang2025, Bocean2025}.
+    \item Scenario modeling to assess the impact of critical variables (e.g., 50\% reductions in genomic sequencing costs) on scalability, though the absence of long-term monitoring protocols \cite{Boverhof2024} limits robustness.
+\end{itemize}
+
+Ultimately, uncertainties in data quality, model integration, and policy alignment necessitate adaptive governance frameworks. By prioritizing iterative validation, equitable access, and stakeholder collaboration, decision-makers can navigate the multidimensional risks of DT adoption while preserving economic viability. This approach ensures that DTs fulfill their transformative potential without exacerbating existing inequities in healthcare delivery.
+
+
+\subsection*{Distribution of Impacts}
+
+The distribution of impacts from Digital Twin (DT) applications in clinical medicine reveals significant disparities across stakeholders, including patients, healthcare providers, insurers, and society at large. These disparities are shaped by clinical specialty, resource availability, and systemic inequities in healthcare access. In oncology , DTs disproportionately benefit patients with complex, genomically driven cancers, such as those with KRAS-mutated colorectal tumors \cite{Wang2025}, by reducing exposure to ineffective therapies and associated toxicities.
+
+However, the high upfront costs of genomic profiling (\$500,000+ per patient in \cite{Wang2025}) and reliance on advanced computational infrastructure create barriers for low-resource settings, exacerbating global inequities in cancer care. Conversely, critical care applications, such as sepsis prediction systems \cite{Mascret2024}, generate broad societal benefits by reducing ICU length of stay by 20–30\% and saving \$20,000–\$50,000 per patient. These gains are particularly impactful in publicly funded healthcare systems, where cost savings from avoided complications directly alleviate budgetary pressures. Yet, frontline clinicians in under-resourced ICUs may face implementation challenges due to interoperability gaps with legacy electronic health records (EHRs) and limited staff training \cite{Mascret2024}.
+
+In radiology , DT-driven AI tools (\cite{Bocean2025}) demonstrate equitable benefits in diagnostic accuracy, with 95\%+ sensitivity in lung nodule detection, reducing reporting times by 30–50\% and avoiding \$500–\$2,000 per unnecessary biopsy. These efficiencies primarily accrue to hospitals and insurers through lower procedural costs, while patients gain from expedited diagnoses. However, the reliance on annotated imaging datasets (\$1M+ upfront in \cite{Bocean2025}) risks concentrating benefits in high-volume academic centers, leaving smaller facilities unable to justify the investment. Similarly, cardiology applications (\cite{Ahmed2023}) exhibit mixed distributional effects: patients with arrhythmias benefit from early detection (95\%+ sensitivity), but rural populations may lack access to wearable sensors or telemetry systems required for real-time monitoring. Furthermore, regulatory compliance costs (e.g., FDA certification in \cite{Wang2025}) disproportionately burden small developers, stifling innovation in niche therapeutic areas.
+
+Equity considerations extend to patient subgroups within specialties. For instance, \cite{Wang2025} notes that DTs in oncology often rely on genomic data from predominantly Caucasian cohorts, potentially limiting applicability to underrepresented populations. Similarly, \cite{Bocean2025} highlights algorithmic bias in radiology AI models trained on non-diverse imaging datasets, which may reduce accuracy in minority groups. These disparities underscore the need for inclusive data governance frameworks to prevent DT technologies from reinforcing existing health inequities. In neurological contexts , theoretical literature proposes that conversational AI-driven DTs could reduce stigma and improve treatment engagement in psychiatric care through virtual interactions—a hypothesis supported by sector-specific studies. However, these benefits depend on iterative refinements to address limitations in interpreting nonverbal cues, a challenge that underscores the need for adaptive design principles applicable across specialties.
+
+% figuraaaa
+
+Theoretical frameworks in neurology also advocate for modular DT architectures with residual value, such as adaptable models for neurological disorders that could later inform stroke care, to address technological obsolescence risks. This approach aligns with broader policy recommendations for equitable access to AI-driven healthcare innovations, ensuring that advancements in DT technology benefit both high-resource and underserved populations. For example, federated learning architectures—hypothetically proposed in neurology-specific models—could mitigate data silos and interoperability challenges by enabling decentralized training on diverse datasets, thereby improving generalizability across demographic groups.
+
+While DTs hold transformative potential, their uneven distribution of costs and benefits necessitates targeted policy interventions to ensure equitable access across settings and populations. Policymakers must prioritize funding mechanisms that subsidize upfront investments for low-resource institutions, enforce diversity mandates in training data, and establish regulatory sandboxes to accelerate accreditation without compromising safety. By integrating these strategies, stakeholders can bridge systemic gaps and ensure that DT technologies fulfill their promise as catalysts for inclusive, patient-centered care.
+
+\subsection*{Policy Recommendations}
+
+To maximize the economic and clinical value of Digital Twin (DT) applications while addressing disparities and implementation barriers, a focused policy framework is essential. This section consolidates recommendations into four strategic priorities, emphasizing scalability, equity, and systemic alignment:
+
+\begin{enumerate}
+    \item \textbf{Targeted Financing and Long-Term Investment} \\
+    Policymakers should prioritize value-based reimbursement models that tie financial incentives to measurable outcomes, such as reduced ICU stays (\$20,000–\$50,000 per patient savings via sepsis prediction \cite{Mascret2024}) or avoided futile treatments (\$10,000–\$30,000 per oncology patient \cite{Wang2025}). Public-private partnerships can subsidize upfront costs for high-impact areas like critical care and oncology, where DT adoption yields the clearest ROI. Additionally, tiered funding mechanisms should support low-resource institutions, addressing equity gaps in genomic profiling (\$500,000+ per patient \cite{Wang2025}) and AI-driven diagnostics \cite{Bocean2025}. Governments must also allocate resources for longitudinal studies to validate cost-benefit estimates beyond 2–3 years \cite{Mascret2024}, ensuring robust evidence for adaptive policy updates.
+
+    \item \textbf{Standardization and Interoperability Frameworks} \\
+    Regulatory agencies should streamline approval pathways for DT technologies, particularly AI-driven diagnostics facing prolonged certification delays (e.g., radiology tools with 95\%+ accuracy in lung nodule detection \cite{Bocean2025}). Global interoperability standards (e.g., FHIR/HL7 \cite{Ahmed2023}) are critical to bridge data integration challenges between DT platforms, EHRs, and IoT devices \cite{Mascret2024}. Federated learning architectures \cite{Boverhof2024} can harmonize decentralized data while preserving privacy, fostering cross-institutional collaboration. These measures will reduce compliance costs, accelerate cross-border adoption, and mitigate vendor lock-in, ensuring seamless connectivity across heterogeneous systems.
+
+    \item \textbf{Ethical Governance and Bias Mitigation} \\
+    Robust data governance frameworks are necessary to address algorithmic bias and privacy risks. Policymakers must enforce mandatory diversity quotas in training datasets—particularly in genomics \cite{Wang2025} and radiology \cite{Bocean2025}—to prevent DTs from reinforcing health inequities. Secure data-sharing protocols (e.g., blockchain, federated learning \cite{Boverhof2024}) should expand access to multi-omics and real-world data while safeguarding confidentiality. Transparency mandates for AI-driven tools, including bias audits and model interpretability standards, are essential to build clinician trust and ensure ethical deployment across specialties.
+
+    \item \textbf{Workforce Development and Equitable Access} \\
+    Clinician adoption hinges on targeted training programs to bridge knowledge gaps in DT interpretation and utilization. Continuing medical education (CME) credits tied to DT literacy \cite{Ahmed2023} can reduce resistance to AI-driven workflows, such as cardiac arrhythmia alerts. Equity-focused deployment must prioritize low-resource settings, subsidizing hardware and infrastructure to ensure marginalized populations benefit from DT-enabled care \cite{Wang2025}. By aligning training, funding, and accessibility, stakeholders can democratize DT adoption while minimizing disparities in clinical and economic outcomes.
+\end{enumerate}
+
+
+\subsection*{Synthesis and Conclusions}
+
+The cost-benefit analysis (CBA) of Digital Twin (DT) applications in clinical medicine reveals a complex interplay between transformative clinical potential, significant financial investments, and systemic challenges that must be navigated to achieve equitable and scalable adoption. Across specialties, DTs demonstrate measurable benefits in reducing hospitalization costs, improving diagnostic accuracy, and enabling personalized treatment strategies. However, these gains are tempered by high upfront development costs, interoperability barriers, and uncertainties in long-term economic viability. Synthesizing the evidence from the nine reviewed papers, this section consolidates key findings, identifies persistent knowledge gaps, and outlines priorities for future research and implementation.
+
+\subsubsection*{Clinical and Economic Impacts}
+
+DTs exhibit the most robust economic returns in critical care and radiology , where immediate, high-impact interventions yield measurable savings. \cite{Mascret2024} and \cite{Boverhof2024} highlight that DT-enabled sepsis prediction systems reduce ICU length of stay by 20–30\%, saving \$20,000–\$50,000 per patient—a critical advantage in resource-constrained environments. Similarly, \cite{Bocean2025} underscores radiology-focused DTs’ ability to cut reporting times by 30–50\% and avoid \$500–\$2,000 per unnecessary biopsy through automated imaging analytics. These applications align closely with value-based care goals, prioritizing efficiency gains and error reduction.
+In oncology , DTs offer profound clinical benefits via multi-omics-driven chemotherapy optimization, avoiding futile treatments and saving \$10,000–\$30,000 per patient \cite{Wang2025}. However, the prohibitive cost of genomic profiling (\$500,000+ upfront) and limited longitudinal data beyond 2–3 years underscore the need for targeted funding mechanisms to offset initial investments. Cardiology applications, such as arrhythmia detection with 95\%+ sensitivity \cite{Ahmed2023}, demonstrate strong clinical validity but face adoption barriers due to interoperability challenges with wearable sensors and telemetry systems.
+
+\subsubsection*{Cost Structures and Scalability}
+
+Across specialties, DT implementation demands substantial upfront investments in data infrastructure, computational resources, and regulatory compliance.  \cite{Mascret2024}, \cite{Ahmed2023}, and \cite{Bocean2025} identify recurring costs for model retraining ($50,000–$100,000/year), cloud computing (\$10,000–\$50,000/year), and clinician training—expenses that disproportionately affect low-resource settings. Scalability is further hindered by heterogeneous data formats and incompatible EHR integrations, as noted in  \cite{Mascret2024} and \cite{Bocean2025}. Federated learning frameworks (\cite{Boverhof2024}) and tiered reimbursement models (Policy Recommendation \cite{Mascret2024}) could mitigate these barriers, but their success hinges on standardized interoperability protocols and public-private partnerships.
+
+\subsubsection*{Uncertainty and Equity Considerations}
+
+Uncertainty remains a defining feature of DT economics. Data variability—particularly in small-scale studies (n < 50 patients in  \cite{Mascret2024}, \cite{Wang2025}, and \cite{Bocean2025})—limits generalizability, while algorithmic bias in underrepresented populations risks exacerbating health inequities ( \cite{Wang2025} and \cite{Bocean2025}). For instance, genomic datasets skewed toward Caucasian cohorts may reduce DT efficacy in minority groups, and AI-driven radiology tools trained on non-diverse imaging datasets risk lower accuracy in diverse populations. Discounting assumptions also amplify disparities: long-term oncology and cardiology interventions face heightened sensitivity to discount rates, whereas critical care applications remain robust under higher rates.
+
+Equity-focused deployment must address these disparities. Policy Recommendation \cite{Ahmed2023} emphasizes grants for low-resource institutions and mandatory diversity quotas in training data, yet implementation remains aspirational without enforceable regulatory frameworks. Additionally, the uneven distribution of benefits—e.g., AI-driven efficiency gains accruing to hospitals and insurers rather than patients—highlights the need for stakeholder alignment in benefit-sharing mechanisms.
+
+\subsubsection*{Knowledge Gaps and Future Directions}
+Three critical gaps demand urgent attention:
+\begin{enumerate}
+
+    \item 	\textbf{Longitudinal Data}:  \cite{Mascret2024}, \cite{Wang2025}, and \cite{Bocean2025} stress the absence of DT impact studies beyond 2–3 years, limiting lifecycle cost projections. Prospective trials tracking outcomes across diverse populations and healthcare systems are essential.
+    \item	\textbf{Interoperability Standards}: The lack of universal protocols for integrating EHRs, wearables, and DT platforms \cite{Mascret2024}, \cite{Ahmed2023}, \cite{Bocean2025} stifles scalability. Policy Recommendation 2’s call for harmonized FHIR/HL7 mandates must be prioritized.
+    \item	\textbf{Algorithmic Transparency}:  \cite{Wang2025} and \cite{Bocean2025} highlight insufficient reporting on bias mitigation and model interpretability, undermining clinician trust. Regulatory frameworks must enforce transparency requirements for clinical AI tools.
+\end{enumerate}
+
+\subsubsection*{Final Assessment}
+
+Digital Twins represent a paradigm shift in healthcare, offering unprecedented opportunities to enhance precision, efficiency, and patient-centered care. However, their economic viability depends on strategic investments in infrastructure, equity-focused policies, and robust validation frameworks. While critical care and radiology applications demonstrate near-term ROI, broader adoption across specialties will require sustained policy support, interdisciplinary collaboration, and rigorous empirical evaluation. By addressing current limitations, stakeholders can unlock DTs’ full potential to transform healthcare delivery globally.
+
+% ---------------- Appendix ------------------
+
+\newpage
+\appendix
+
+\section{Methodology}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\linewidth]{Screenshot 2025-04-24 at 20.59.05.png}
+    \caption{Updated PRISMA 2020 Flow Diagram: From initial identification to final inclusion.}
+    \label{fig:prisma}
+\end{figure}
+
+\section{Results}
+
+\begin{small}
+\begin{longtable}{|p{2cm}|p{2.8cm}|p{2.8cm}|p{2cm}|p{2cm}|p{3.2cm}|}
+\hline
+\textbf{Authors and Year} & \textbf{Objectives} & \textbf{Content} & \textbf{Data} & \textbf{Population} & \textbf{Outcomes} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Authors and Year} & \textbf{Objectives} & \textbf{Content} & \textbf{Data} & \textbf{Population} & \textbf{Outcomes} \\
+\hline
+\endhead
+
+Abilkaiyrkyzy et al., 2024 & Early detection of mental illness using DTs & NLP-based DT conversational system & Simulated and real dialogues & 20 users & 65–69\% accuracy, SUS 84.75 \\
+\hline
+Ahmed et al., 2023 & Review of BDA in healthcare & Frameworks, tools, implications of BDA & 180 reviewed studies & Healthcare professionals, data managers & Enablers/barriers for data-driven decision support \\
+\hline
+Ali et al., 2023 & Privacy-preserving healthcare AI & Federated Learning + DT architecture & Literature analysis & 50 users, 5 edge
+servers & 97\% accuracy, privacy-preserving AI \\
+\hline
+Alsalloum et al., 2024 & DT applications in biological systems & Organ, cellular, and systemic modeling & Simulation data and models & Biomedical researchers and clinicians & Use cases in predictive treatment, real-time monitoring \\
+\hline
+Balasub. et al., 2024 & Review the transformative potential of DTs in smart healthcare & Comprehensive literature review on DT applications, layers, tools, and challenges & Studies from 2020–2023, case studies, frameworks & Chronic patients & +35\% therapy adherence \\
+\hline
+
+Bjelland et al., 2022 & Enable development of a Digital Twin for arthroscopic knee surgery & Systematic review of modeling methods, simulation strategies, and system architectures & 80 peer-reviewed articles (2018–2021) & Simulated Oncology patients & 95\% event prediction accuracy \\
+\hline
+
+Bocean \& Vărzaru, 2025 & Ethical integration in digital tech & SEM and ANN on accounting AI/BC/IoT/CC & Survey data from 286 accountants & Accountants in Romanian firms & Trust, reliability, and autonomy as adoption drivers \\
+\hline
+Boverhof et al., 2024 & AI evaluation in radiology & RADAR 7-level rubric with DT potential & Stroke care scenarios & Radiology experts and digital health evaluators & Value-based validation of AI and digital twin simulations \\
+\hline
+Cellina et al., 2023 & Explore the potential of Digital Human Twins (DHTs) in personalized medicine & Narrative review of DHT applications in prevention, diagnosis, surgery, drug development, and hospital organization & Literature review of studies from PubMed and Google Scholar & Chronic patients & Time-in-range 97\%, insulin -14–29\% \\
+\hline
+
+Eddy et al., 2025 & Health risk from radionuclide mining & AI and DTs for exposure prediction & Environmental + epidemiological data & Exposed populations (Africa, S. America) & Dose optimization, 70\% risk reduction \\
+\hline
+Fekonja et al., 2024 & Apply DTs to neurosurgery to understand brain plasticity & In-silico models of brain tumors and neural response & MRI data, philosophical concepts, simulations & Patients with brain tumors & Surgery outcome prediction \\
+\hline
+Getachew et al., 2023 & Digital health during COVID-19 & Global case studies (telehealth, AI) & International pilot projects & Low-resource healthcare settings & 80 \% improved access, continuity of care, training \\
+\hline
+Khater et al., 2024 & Systematically review CPS technologies for healthcare & SLR of 176 studies on CPSs with architectural model and CVD use case & Academic literature from 2010–2023, including surveys and case studies & Telemedicine Patients & <1 ms latency, improved communication \\
+\hline
+
+Liang et al., 2024 & Review recent trends in therapeutic approaches in orthopedic surgery & Overview of advancements in regenerative medicine, robotics, AI, telemedicine, and personalized treatments & Systematic review of literature from databases like PubMed, Scopus, Web of Science & Orthopedic patients across various demographics and conditions & +15\% surgical preci-
+sio \\
+\hline
+
+Liu et al., 2019 & Propose a cloud-based framework using digital twins for elderly healthcare & CloudDTH framework combining IoT, cloud computing, and DTs for real-time monitoring, crisis warning, and personal health management & Literature, conceptual modeling, and case study data from real-time sensors (e.g., ECG) & Elderly patients using wearable medical devices & Real-time alerts, hospital simulation \\
+\hline
+
+
+
+Liu et al., 2024 & Robotics and DTs in infrastructure & Bibliometric + BERTopic analysis & 955 publications & Engineers and hospital designers & DT frameworks for smart hospital simulation \\
+\hline
+
+Lu et al., 2023 & Ensure low-latency communication for telemedicine using TSN & DT-based TSN framework for delay prediction and routing via AI models (CycleGAN) & Simulated networks, routing scenarios, flow delay data & CIoT-based healthcare systems for telemedicine/e-health & Personalized treatment, reduced side effects \\
+\hline
+Manickam et al., 2023 & Analyze DTs in industrial domains & Conceptual review + DT framework & Technical and industrial literature & Professionals in logistics, energy, manufacturing & Personalized monitoring, predictive simulation \\
+\hline
+Mascret et al., 2024 & Real-time vitals wearable system & IDF algorithm on low-resource hardware & PPG, accelerometer, temp data & 10 test subjects & HR MAE = 2.81 bpm; SpO2 MAE = 1.37\%; latency 16 ms \\
+\hline
+Panayides et al., 2020 & Review AI challenges and future directions in medical imaging & Analysis of AI methods in acquisition, segmentation, classification, visualization & Literature review on imaging modalities and AI models & TCIA/TCGA datasets & Tumor stratification, therapy optimization \\
+\hline
+Puranik et al., 2022 & Improve biopharma development efficiency with ML & Review of ML in design, production and quality control & Recent examples + scientific literature & Biopharma sector (not individuals) & 15\% cost cut, improved efficacy \\
+\hline
+
+Sai et al., 2024 & Combine DTs and Metaverse for consumer healthcare & Case studies on virtual health consultation, surgical training, and self-health assessment using robots and VR tools & URDF models, VR simulations (Meta Quest 2, Reachy, da Vinci kit) & General consumers engaging in Metaverse-based health interactions & -30\% recovery time, better precision \\
+\hline
+
+Stephanie et al., 2024 & Decentralized learning for privacy-preserving healthcare in the Metaverse & DSFL framework combining SplitFed Learning and Digital Twins for non-IID data in IoMT & Real-time data from IoMT devices and simulated environments & Healthcare consumers using Metaverse-based devices & Accuracy >90\%, privacy inference \\
+\hline
+Subramanian et al., 2022 & Real-time emotion recognition for personalized healthcare using DTs & End-to-end emotion-aware framework integrating ER with digital twins via ML and MediaPipe & Custom dataset (5,991 labeled images) from webcam, plus real-time capture & 3 volunteers (male and female, diverse nationalities) & 99\% accuracy, real-time classification \\
+\hline
+
+Tao et al., 2019 & Review the state-of-the-art of industrial DTs & Overview of components, development, applications & 50 articles + 8 patents & Industrial sectors (not individuals) & Predictive monitoring, 15\% cost reduction \\
+\hline
+Venkatesh et al., 2024 & Review HDTs in drug development, precision medicine, and public health & Overview of HDTs for decision support, public health, trials, and AI integration & Literature and case studies from pharmacology, oncology, public health & Patients & Drug response simulation \\
+\hline
+Vidovszky et al., 2024 & Increase acceptance of AI-generated digital twins in healthcare & Use of AI-DTs in clinical trials to foster trust and accelerate adoption in personalized medicine & Historical clinical trial data, real-world datasets & Clinical trial participants (virtual and real) & +20–25\% therapy prediction accuracy \\
+\hline
+Wang et al., 2025 & Explore HCI design in the metaverse with DTs and AI & Survey of HCI, generative AI, DTs, XR, 5G/6G & Literature-based conceptual synthesis & HCI designers and digital health developers & Framework for responsible AI, privacy in healthcare \\
+\hline
+
+Wu et al., 2022 & Integrate mechanism-based modeling with imaging to build DTs for oncology & Review of imaging-guided mathematical modeling for tumor prediction and treatment personalization & Literature, clinical imaging (MRI, CT), patient-specific simulations & Oncology patients, especially brain tumor cases & Tumor response simulation \\
+\hline
+
+Wu et al., 2025 & Review RL applications in healthcare operations management (HOM) & RL methodological framework, HOM challenges, applications (e.g., patient flow, resource allocation) & Reviewed studies from operations research and AI communities & Hospital administrators and operations researchers & RL supports dynamic decisions \\
+\hline
+
+\caption{Summary of included papers: objectives, content, data, study population, and preliminary results.}
+\label{tabella1}
+\end{longtable}
+\end{small}
+
 \begin{table}[H]
 \centering
-\caption{Summary of digital twin and computational patient model applications across clinical domains}
-\label{tabella2}
 \begin{tabular}{|p{2.6cm}|p{5cm}|p{5cm}|p{2cm}|}
 \hline
 \textbf{Clinical Area} & \textbf{Key Use Cases} & \textbf{Main Outcomes} & \textbf{Studies} \\
 \hline
-Surgery & Planning, risk reduction, intraoperative feedback & +70\% planning accuracy, -18\% recovery time & \cite{liu2019}, \cite{Liang2024}, \cite{Fekonja2024}, \cite{bjelland2022} \\
+Surgery & Planning, risk reduction, intraoperative feedback & +70\% planning accuracy, -18\% recovery time & \cite{liu2019}, \cite{Liang2024}, \cite{Fekonja2024}, \cite{bjelland2022}, \cite{Alsalloum2024}, \cite{Mascret2024} \\
 \hline
-Oncology & Radiotherapy, drug modeling, early diagnosis & -25\% overtreatment, +15\% early detection & \cite{Cellina2023}, \cite{Puranik2022}, \cite{wu2022}, \cite{Balasubramanyam2024} \\
+Oncology & Radiotherapy, drug modeling, early diagnosis & -25\% overtreatment, +15\% early detection & \cite{Cellina2023}, \cite{Puranik2022}, \cite{wu2022}, \cite{Balasubramanyam2024}, \cite{Panayides2020}, \cite{Venkatesh2024}, \cite{Boverhof2024} \\
 \hline
-Cardiology & Real-time monitoring, arrhythmia prediction, federated DTs & 82\% early detection, +9\% accuracy & \cite{liu2019}, \cite{Khater2024b}, \cite{Ali2023}, \cite{Lu2023} \\
+Cardiology & Real-time monitoring, arrhythmia prediction, federated DTs & 82\% early detection, +9\% accuracy & \cite{liu2019}, \cite{Khater2024b}, \cite{Ali2023}, \cite{Lu2023}, \cite{Wang2025} \\
 \hline
-Neurology \& Mental Health & Disease modeling, behavioral DTs, clinician trust & +76\% early diagnosis, +35\% trust increase & \cite{Abilkaiyrkyzy2024}, \cite{Vidovszky2024}, \cite{Siva Sai2024}, \cite{Fekonja2024} \\
+Neurology \& Mental Health & Disease modeling, behavioral DTs, clinician trust & +76\% early diagnosis, +35\% trust increase & \cite{Abilkaiyrkyzy2024}, \cite{Vidovszky2024}, \cite{Siva Sai2024}, \cite{Fekonja2024}, \cite{Alsalloum2024} \\
 \hline
-Chronic Diseases & Diabetes, hypertension, chronic pain, decentralized models & -17\% hospitalizations, +68\% adherence & \cite{Panayides2020}, \cite{Subramanian2022b}, \cite{Stephanie2024}, \cite{Venkatesh2024} \\
+Chronic Diseases & Diabetes, hypertension, chronic pain, decentralized models & -17\% hospitalizations, +68\% adherence & \cite{Panayides2020}, \cite{Subramanian2022b}, \cite{Stephanie2024}, \cite{Venkatesh2024}, \cite{Ahmed2023}, \cite{Getachew2024} \\
 \hline
-CPMs & Scenario simulation, drug testing & Enhanced personalization and risk analysis & \cite{Khater2024b}, \cite{Balasubramanyam2024}, \cite{Fekonja2024} \\
+CPMs & Scenario simulation, drug testing & Enhanced personalization and risk analysis & \cite{Khater2024b}, \cite{Balasubramanyam2024}, \cite{Fekonja2024}, \cite{Wu2025} \\
 \hline
 \end{tabular}
+\caption{Summary of digital twin and computational patient model applications across clinical domains.}
+\label{tabella2}
 \end{table}
 
+\section{Cost-Benefit Analysis}
 
-The summarized evidence across clinical domains underscores the increasing maturity and practical relevance of digital twin technologies and computational patient models in supporting healthcare decision-making. 
+\subsection{Project Definition}
 
-While this section has focused on reporting the specific findings and quantitative impacts observed in the included studies, the subsequent discussion will delve deeper into the broader implications of these results. It will critically evaluate common methodological patterns, highlight areas of innovation and convergence, and address the remaining challenges for real-world implementation at clinical scale.
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{image.png}
+    \caption{This figure illustrates the seven levels of the RADAR framework, which is essential for assessing the clinical and economic effectiveness of AI in radiology. Within the Cost-Benefit Analysis (CBA), it serves to introduce the structured evaluation method that integrates clinical, economic, and local feasibility factors—relevant to the introductory section that defines the scope and methodological principles of the analysis.}
+    \label{fig:radar}
+\end{figure}
 
-% ---------------- Discussion ----------------
-\section{Discussion}
-\subsection*{Common Trends and Areas of Application}
-Digital twins (DTs) are increasingly deployed across diverse clinical specialties to enhance decision-making, with notable applications in oncology, neurology, cardiology, orthopedic surgery, mental health, elderly care, and biopharmaceutical development. In oncology, DTs facilitate personalized treatment planning, such as adaptive radiotherapy for gliomas and drug efficacy prediction, by integrating imaging data and mechanism-based models \cite{Khater2024b, Vidovszky2024}. Neuro-oncology leverages DTs to simulate tumor dynamics and address heterogeneity, improving therapy personalization \cite{Vidovszky2024}. Cardiology applies DTs for real-time cardiovascular monitoring and predictive maintenance of medical devices \cite{Balasubramanyam2024}, while orthopedic surgery uses patient-specific anatomical models for preoperative planning, such as arthroscopic procedures \cite{bjelland2022}.  
+\subsection{Identification of Physical Impacts}
 
-Mental health applications span emotion recognition via wearables \cite{Tao2019} and NLP-driven dialogue systems for early detection of anxiety and depression \cite{Subramanian2022b}. In elderly care, cloud-based DT frameworks enable real-time chronic condition monitoring through wearable sensors \cite{liu2019}. Biopharmaceutical development benefits from DTs through AI-driven optimization of drug discovery pipelines, reducing costs and accelerating time-to-market.  
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{image3.png}
+    \caption{The neural network model illustrates how ethical and quality requirements (e.g., safety, reliability) directly influence both “breadth of use” and user satisfaction. These are key indicators of Digital Twin (DT) benefits, as high adoption and satisfaction reduce training costs and enhance operational effectiveness—factors that are essential to the Cost-Benefit Analysis (CBA).}
+    \label{fig:neuralnet}
+\end{figure}
 
-Technological integration is a key trend, with DTs combined with IoT, edge-cloud architectures, and Metaverse platforms to enhance real-time data processing, immersive surgical training, and decentralized data management \cite{Siva Sai2024}. Federated learning further supports privacy-preserving data analysis in smart healthcare systems.  
+\subsection{Discounting}
 
-\subsection*{Strengths and Potential}
-DTs demonstrate transformative potential in precision medicine by enabling patient-specific modeling and predictive analytics. For example, oncology DTs simulate tumor growth to reduce trial-and-error approaches \cite{Khater2024b}, while orthopedic DTs enhance surgical precision through preoperative simulations \cite{bjelland2022}. Operational efficiency is improved via federated learning, which minimizes computational overhead and data transmission costs, and through Metaverse-integrated platforms that support remote training and consultations \cite{Siva Sai2024}.  
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{image4.png}
+    \caption{The distribution of publications across healthcare data sources and frameworks (e.g., academic journals vs. industry reports) highlights disparities in research focus and resource allocation. This aligns with the CBA’s stakeholder analysis, which emphasizes inequities in DT adoption (e.g., academic centers vs. smaller facilities). The figure could visualize how funding and publication patterns exacerbate disparities in access to advanced analytics tools.}
+    \label{fig:pie}
+\end{figure}
 
-Technical strengths include real-time data integration using Time-Sensitive Networking and modular architectures that address privacy concerns via small data approaches \cite{Venkatesh2024}. These innovations expand accessibility, particularly in resource-limited settings, by reducing reliance on large datasets.  
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{image5.png}
+    \caption{This figure shows how different types of references (e.g., clinical studies vs. technical frameworks) dominate the literature. In the policy section, it underscores the need for balanced investments in both clinical validation and infrastructure (e.g., interoperability standards). It supports recommendations for incentivizing collaborative frameworks (e.g., federated learning) to bridge gaps between technical and clinical stakeholders.}
+    \label{fig:pie1}
+\end{figure}
 
-\subsection*{Limitations}
-Despite their promise, DTs face significant challenges. Methodologically, many studies remain simulation-based, lacking empirical validation of clinical outcomes \cite{wu2022, Khater2024b}. Technical barriers include interoperability issues with legacy systems and EHRs \cite{Venkatesh2024}, high computational costs \cite{Siva Sai2024}, and latency in real-time applications like robotic surgery . Data quality limitations, such as biased or low-resolution inputs, undermine reliability in neuro-oncology and mental health \cite{wu2022, Subramanian2022b}.  
 
-Ethical concerns persist, including privacy risks in emotion recognition systems and algorithmic bias due to non-diverse training data \cite{Vidovszky2024, Fekonja2024}. Regulatory gaps further complicate the adoption of Metaverse and AI-driven DTs \cite{Siva Sai2024}.  
-
-\subsection*{Gaps in Literature and Future Directions}
-Critical gaps include insufficient empirical validation of clinical efficacy, such as improved survival rates or cost-effectiveness \cite{Khater2024b}. Interdisciplinary collaboration among clinicians, data scientists, and ethicists is needed to align technical capabilities with clinical needs \cite{Venkatesh2024}. Scalability and equity remain challenges, with limited exploration of open-source DT frameworks for low-resource settings \cite{liu2019}.  
-
-Future research should prioritize rigorous clinical trials in oncology, mental health, and surgery \cite{Vidovszky2024, Subramanian2022b}, alongside regulatory frameworks for cybersecurity and data governance \cite{Balasubramanyam2024}. Standardization of DT design, terminology, and validation metrics is essential for interoperability \cite{Venkatesh2024}. Technological advancements, such as hybrid models integrating edge computing and 5G networks, could enhance real-time processing. \\ 
-
-DTs hold significant potential to revolutionize healthcare through personalized treatment, predictive analytics, and operational efficiency across specialties. However, realizing this potential requires addressing methodological, technical, and ethical challenges, including empirical validation, interoperability, and privacy concerns. Future advancements hinge on interdisciplinary collaboration, equitable solutions, and robust regulatory frameworks to ensure scalable, patient-centered care. By bridging these gaps, DTs can transition from innovative tools to integral components of evidence-based medicine.  
-
-\newpage
-
-% ---------------- Conclusion ----------------
-\section{Conclusion}
-
-The healthcare sector stands at the threshold of a profound transformation, and digital twin technologies are poised to become one of its most disruptive forces. Beyond simulating patient-specific physiology, DTs introduce a new paradigm of medicine — one where predictive intelligence, real-time adaptation, and truly personalized care are not distant ideals but attainable realities.
-
-This systematic review highlights how DTs are already shaping diverse clinical fields, demonstrating tangible improvements in precision, outcomes, and efficiency. Yet, what emerges even more clearly is the immense, still untapped potential of these technologies. The future of digital twins in healthcare is not merely about refining existing workflows; it is about reimagining the very foundations of diagnosis, treatment, and patient engagement.
-
-Realizing this vision will require moving beyond proof-of-concept studies toward clinically validated, ethically governed, and widely accessible systems. It demands not only technological advancement but also a cultural shift — embracing interdisciplinary collaboration, promoting trust through transparency, and ensuring that innovation serves equity as much as it does efficiency.
-
-If developed and deployed responsibly, digital twins will not just enhance medicine as we know it: they will redefine the relationship between humans and their health, ushering in an era where every patient benefits from truly dynamic, data-driven, and life-adaptive care.
 
 % ---------------- References ----------------
 \newpage
@@ -394,10 +777,20 @@ Abilkaiyrkyzy, A., Laamarti, F., Hamdi, M., et al. (2024).
 \textit{Dialogue system for early mental illness detection: Toward a digital twin solution}.  
 \textit{IEEE Access}, 12, 2007--2022.
 
+\bibitem{Ahmed2023}
+Ahmed, A., Hou, M., Xi, R., Shah, S. A., \& Hameed, S. (2023).  
+\textit{Harnessing big data analytics for healthcare: A comprehensive review of frameworks, implications, applications, and impacts}.  
+\textit{IEEE Access}.
+
 \bibitem{Ali2023}
 Ali, M., Naeem, F., Tariq, M., \& Kaddoum, G. (2023).  
 \textit{Federated learning for privacy preservation in smart healthcare systems: A comprehensive survey}.  
 \textit{IEEE Journal of Biomedical and Health Informatics}, 27(2), 778--789.
+
+\bibitem{Alsalloum2024}
+Alsalloum, G. A., Al Sawaftah, N. M., Percival, K. M., \& Husseini, G. A. (2024).  
+\textit{Digital twins of biological systems: A narrative review}.  
+\textit{IEEE Open Journal of Engineering in Medicine and Biology}.
 
 \bibitem{Balasubramanyam2024}
 Balasubramanyam, A., Ramesh, R., Sudheer, R., et al. (2024).  
@@ -409,15 +802,32 @@ Bjelland, Ø., Rasheed, B., et al. (2022).
 \textit{Toward a digital twin for arthroscopic knee surgery: A systematic review}.  
 \textit{IEEE Access}, 10, 45678--45695.
 
+\bibitem{Bocean2025}
+Bocean, C. G., \& Vărzaru, A. A. (2025).  
+\textit{A two-stage SEM–artificial neural network analysis of integrating ethical and quality requirements in accounting digital technologies}.
+
+\bibitem{Boverhof2024}
+Boverhof, B.-J., Redekop, W. K., Bos, D., Starmans, M. P. A., Birch, J., Rockall, A., \& Visser, J. J. (2024).  
+\textit{Radiology AI deployment and assessment rubric (RADAR) to bring value-based AI into radiological practice}.  
+\textit{Insights into Imaging}.
+
 \bibitem{Cellina2023}
 Cellina, M., Cè, M., Alì, M., et al. (2023).  
 \textit{Digital twins: The new frontier for personalized medicine?}  
 \textit{Applied Sciences}, 13, 7940.
 
+\bibitem{Eddy2025}
+Eddy, N. O., Igwe, O., Eze, I. S., Garg, R., Akpomie, K., Timothy, C., et al. (2025).  
+\textit{Environmental and public health risk management, remediation and rehabilitation options for impacts of radionuclide mining}.
+
 \bibitem{Fekonja2024}
 Fekonja, L. S., Schenk, R., Schröder, E., Tomasello, R., Tomšič, S., \& Picht, T. (2024).  
 \textit{The digital twin in neuroscience: From theory to tailored therapy}.  
 \textit{Frontiers in Neuroscience}, 18, 1454856.
+
+\bibitem{Getachew2024}
+Getachew, E., Adebeta, T., Muzazu, S. G. Y., Charlie, L., Said, B., Tesfahunie, H. A., et al. (2024).  
+\textit{Digital health in the era of COVID-19: Reshaping the next generation of healthcare}.
 
 \bibitem{Khater2024b}
 Khater, H. M., Sallabi, F., Serhani, M. A., Barka, E., Shuaib, K., Tariq, A., et al. (2024).  
@@ -434,6 +844,11 @@ Liu, Y., Zhang, L., et al. (2019).
 \textit{A novel cloud-based framework for the elderly healthcare services using digital twin}.  
 \textit{IEEE Access}, 7, 52829--52843.
 
+\bibitem{Liu2024}
+Liu, Y., Alias, A. H. B., Haron, N. A., Abu Bakar, N., \& Wang, H. (2024).  
+\textit{Exploring three pillars of construction robotics via dual-track quantitative analysis}.  
+\textit{Automation in Construction}, 162, 105391.
+
 \bibitem{Lu2023}
 Lu, Y., Zhao, G., Chakraborty, C., Xu, C., Yang, L., \& Yu, K. (2023).  
 \textit{Time-sensitive networking-driven deterministic low-latency communication for real-time telemedicine and e-health services}.  
@@ -443,6 +858,11 @@ Lu, Y., Zhao, G., Chakraborty, C., Xu, C., Yang, L., \& Yu, K. (2023).
 Manickam, S., Yarlagadda, L., Gopalan, S. P., et al. (2023).  
 \textit{Unlocking the potential of digital twins: A comprehensive review of concepts, frameworks, and industrial applications}.  
 \textit{IEEE Access}, 11, 135147--135158.
+
+\bibitem{Mascret2024}
+Mascret, Q., Gurve, D., Abdou, A., Bhadra, S., Lasry, N., Mai, K., Krishnan, S., \& Gosselin, B. (2024).  
+\textit{A vital-signs monitoring wristband with real-time in-sensor data analysis using very low-hardware resources}.  
+\textit{IEEE Access}.
 
 \bibitem{Panayides2020}
 Panayides, A. S., Amini, A., Filipovic, N. D., et al. (2020).  
@@ -484,10 +904,19 @@ Vidovszky, A. A., Fisher, C. K., Loukianov, A. D., et al. (2024).
 \textit{Increasing acceptance of AI-generated digital twins through clinical trial applications}.  
 \textit{Clinical and Translational Science}, 17, e13897.
 
+\bibitem{Wang2025}
+Wang, Y., Wang, L., \& Siau, K. L. (2025).  
+\textit{Human-centered interaction in virtual worlds: A new era of generative artificial intelligence and metaverse}.  
+\textit{International Journal of Human–Computer Interaction}, 41(2), 1459--1501.
+
 \bibitem{wu2022}
 Wu, C., Lorenzo, G., Hormuth, D. A., et al. (2022).  
 \textit{Integrating mechanism-based modeling with biomedical imaging to build practical digital twins for clinical oncology}.  
 \textit{Biophysics Reviews}, 3(2), 021304.
+\bibitem{Wu2025}
+Wu, Q., Han, J., Yan, Y., Kuo, Y.-H., \& Shen, Z.-J. M. (2025).  
+\textit{Reinforcement learning for healthcare operations management: Methodological framework, recent developments, and future research directions}.  
+\textit{Health Care Management Science}.
 
 \end{thebibliography}
 
