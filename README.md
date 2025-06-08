@@ -17,12 +17,12 @@ Professor: *Cinzia Daraio*
 Department: *DIAG - Sapienza University of Rome*
 
 ## Project Date
-**1st deadline : 27 April 2025**
+**1st deadline : 23 May 2025**
 
 ---
 
 ## Abstract
-This project systematically reviews the role of **Digital Twin (DT)** technologies in the healthcare sector. Using a PRISMA-aligned selection methodology, we analyze 20 peer-reviewed studies across various clinical domains: surgery, oncology, cardiology, neurology, mental health, and chronic disease management. The review identifies key applications, benefits, challenges, and future research directions.
+This project systematically reviews the role of **Digital Twin (DT)** technologies in the healthcare sector. Using a PRISMA-aligned selection methodology, we analyze 30 peer-reviewed studies across various clinical domains: surgery, oncology, cardiology, neurology, mental health, and chronic disease management. The review identifies key applications, benefits, challenges, and future research directions. A cost-benefit analysis is also carried out over a 5-year time horizon to quantify the actual economic results in the adoption of these technologies in fields such as Oncology and Surgery. 
 
 **Keywords:** Digital Twins, Computational Modeling, Clinical Decision-Making, Healthcare Innovation, Precision Medicine, Medical Technology
 
@@ -37,7 +37,7 @@ This project systematically reviews the role of **Digital Twin (DT)** technologi
 - **Framework**: python implementation of the search engine , PRISMA 2020 compliance.
 - **Corpus**: 130 scientific papers manually collected.
 - **Filtering**: Semantic filtering via Python-based Boolean queries.
-- **Final Selection**: 20 studies included.
+- **Final Selection**: 30 studies included.
 - **Extraction Tools**: PyMuPDF, pandas for metadata organization. (using python) 
 
 Semantic Query Focused On:
